@@ -11,6 +11,9 @@ hugo.exe
 # Icon must end with two \r
 Icon
 
+# Dependency directories
+node_modules/
+
 # Thumbnails
 ._*
 
