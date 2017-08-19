@@ -1,0 +1,8 @@
+{
+  "name": "harapeko2017",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:harapeko/harapeko2017hugo.git",
+  "author": "harapeko <tea.lile.tea@gmail.com>",
+  "license": "MIT"
+}
