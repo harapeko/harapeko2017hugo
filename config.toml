@@ -3,5 +3,4 @@ languageCode = "ja"
 title = "はらぺこ屋"
 theme = "harapeko2017"
 
-publishDir = "harapeko.github.io"
 hasCJKLanguage = true
