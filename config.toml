@@ -1,6 +1,13 @@
-baseURL = "http://example.org/"
-languageCode = "ja"
-title = "はらぺこ屋"
-theme = "harapeko2017"
+title						= "はらぺこ屋"
+languageCode		= "ja"
+baseURL					= "http://example.org/"
+theme						= "harapeko2017"
+hasCJKLanguage	= true
 
-hasCJKLanguage = true
+[params]
+  description = "はらぺこ屋 猫と自転車と技術"
+  googleanalytics = "UA-26792812-1"
+
+[social]
+  twitter = "harapeko_wktk"
+  github = "harapeko"

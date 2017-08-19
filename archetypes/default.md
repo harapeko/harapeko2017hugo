@@ -1,6 +1,8 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+eyecatch: ""
+category: ""
+tags: []
+draft: false
 ---
-
