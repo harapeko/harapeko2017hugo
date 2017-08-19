@@ -2141,6 +2141,10 @@ safe-buffer@^5.0.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
+sakura.css@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/sakura.css/-/sakura.css-1.0.0.tgz#d16e673e7a7d16b3ec41c9555be152d960c329b2"
+
 sass-graph@^2.1.1:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/sass-graph/-/sass-graph-2.2.4.tgz#13fbd63cd1caf0908b9fd93476ad43a51d1e0b49"

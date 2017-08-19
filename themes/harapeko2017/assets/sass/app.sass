@@ -1,2 +1,57 @@
+@charset "UTF-8"
+
 body
 	display: flex
+
+// SETTINGS: プリプロセッサで利用するグローバル変数や全体の設定
+// @import "_settings.variables"
+
+// TOOLS: プリプロセッサで利用するmixinやfunctionなど
+// @import "_tools.mixin"
+// @import "_tools.function"
+
+// GENERIC: 基礎スタイル。normalize.css、reset, box-sizingなど
+// @import "_generic.normalize"
+// @import "_generic.shared"
+@import "sakura"
+
+// ELEMENTS: 要素型セレクタ
+// !!基本的に使用しない!!
+
+// OBJECTS: 装飾を持たない基本骨子なデザインパターン
+// !!今回は不要そう!!
+
+// COMPONENTS: 装飾を持つデザインパターン
+// st-(Structure)...サイト共通のレイアウト
+// sc-(SiteCommon)...サイト共通の小さなパーツ
+// tp-(TopPage)...サイトトップページ
+// ap-(AboutUsPage)...協会情報ページ
+// ip-(InquiriesPage)...お問い合わせページ
+// @import "_components.st-body"
+// @import "_components.st-header"
+// @import "_components.st-nav"
+// @import "_components.st-bread"
+// @import "_components.st-main"
+// @import "_components.st-footer"
+// @import "_components.st-copy"
+
+// @import "_components.sc-h1"
+// @import "_components.sc-h2"
+// @import "_components.sc-section"
+// @import "_components.sc-table"
+// @import "_components.sc-list"
+// @import "_components.sc-input"
+// @import "_components.sc-textarea"
+// @import "_components.sc-button"
+// @import "_components.sc-pagination"
+
+// @import "_components.tp-hero"
+// @import "_components.tp-info"
+// @import "_components.tp-sitemap"
+
+// @import "_components.ap-contact"
+
+// @import "_components.ip-formlayout"
+
+// TRUMPS
+// @import "_trumps.dirty"

@@ -10,7 +10,8 @@ paths =
 
 support_browsers = [
   'last 2 versions'
-  'ie >= 11'
+  'not ie <= 11'
+  'not ie_mob <= 11'
 ]
 
 # sass compile process
@@ -21,7 +22,7 @@ sass_compile_process = (in_path, out_path, dest_file_name = 'app.css') ->
   g.src in_path
   .pipe $.plumber()
   .pipe $.sass
-    outputStyle: 'compressed'
+    includePaths: "node_modules/sakura.css/scss"
   .pipe $.cssnano
     autoprefixer:
       browsers: support_browsers
