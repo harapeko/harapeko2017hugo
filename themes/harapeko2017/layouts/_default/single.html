@@ -1,35 +1,41 @@
 {{ partial "header.html" . }}
 
-<article>
-	<h1>{{ .Title }}</h1>
+<div class="wrapper">
+	<main>
+		<article>
+			<h1>{{ .Title }}</h1>
 
-	<time>{{ .Date.Format "2006/1/2" }}</time>
+			<time>{{ .Date.Format "2006/1/2" }}</time>
 
-	{{ with .Params.eyecatch }}
-		<amp-img
-		src="{{ . }}"
-		alt="TODO"
-		width="480"
-		height="480"
-		layout="responsive">
-		</amp-img>
-	{{ end }}
-
-	{{ with .Params.category }}
-		<div>
-			<a href="/category/{{ . }}">{{ . }}</a>
-		</div>
-	{{ end }}
-
-	{{ with .Params.tags }}
-		<div>
-			{{ range . }}
-				<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
+			{{ with .Params.eyecatch }}
+				<amp-img
+				src="{{ . }}"
+				alt="TODO"
+				width="480"
+				height="480"
+				layout="responsive">
+				</amp-img>
 			{{ end }}
-		</div>
-	{{ end }}
 
-	<div class="post-content">{{ .Content }}</div>
-</article>
+			{{ with .Params.category }}
+				<div>
+					<a href="/category/{{ . }}">{{ . }}</a>
+				</div>
+			{{ end }}
+
+			{{ with .Params.tags }}
+				<div>
+					{{ range . }}
+						<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
+					{{ end }}
+				</div>
+			{{ end }}
+
+			<div class="post-content">{{ .Content }}</div>
+		</article>
+	</main>
+
+	{{ partial "sidebar.html" . }}
+</div>
 
 {{ partial "footer.html" . }}

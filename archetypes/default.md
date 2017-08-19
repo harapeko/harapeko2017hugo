@@ -2,7 +2,7 @@
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
 eyecatch: ""
-category: ""
+categories: ""
 tags: []
 draft: false
 ---

@@ -1,0 +1,15 @@
+<div class="wrapper">
+	<aside>
+		<h2>最近の投稿</h2>
+		<ul>
+			{{- range .Data.Pages }}
+				{{ .Render "recent_li" }}
+			{{- end }}
+		</ul>
+	</aside>
+
+	<aside>
+		<h2>ad</h2>
+		<p>TODO</p>
+	</aside>
+</div>

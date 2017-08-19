@@ -1,5 +1,17 @@
 {{ partial "header.html" . }}
 
-<h1>はじめてのHUGO</h1>
+<h1>{{ .Site.Title }}</h1>
+
+<div class="wrapper">
+	<main>
+		<ul>
+			{{- range .Data.Pages }}
+				{{ .Render "li" }}
+			{{- end }}
+		</ul>
+	</main>
+
+	{{ partial "sidebar.html" . }}
+</div>
 
 {{ partial "footer.html" . }}
