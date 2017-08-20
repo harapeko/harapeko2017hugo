@@ -1,6 +1,6 @@
 title						= "はらぺこ屋"
 languageCode		= "ja"
-baseURL					= "http://machinist-switch-72660.netlify.com/"
+baseURL					= "https://machinist-switch-72660.netlify.com/"
 theme						= "harapeko2017"
 hasCJKLanguage	= true
 
