@@ -52,8 +52,8 @@
 	"genre": "{{ .Params.categories }}",
 	"keywords": "{{ range .Params.tags }}{{ . }}, {{ end }}",
 	"url": "{{ .Permalink }}",
-	"datePublished": "{{ .Date.Format "2006-01-02T15:04:05-0700" | safeHTML }}",
-	"dateModified": "{{ if (eq .Lastmod .Date) }}{{ time .Date | safeHTML }}{{ else }}{{ time .Lastmod | safeHTML }}{{ end }}",
+	"datePublished": "{{ .Date.UTC.Format "2006-01-02T15:04:05Z" }}",
+	"dateModified": "{{ if (eq .Lastmod .Date) }}{{ .Date.UTC.Format "2006-01-02T15:04:05Z" }}{{ else }}{{ .Lastmod.UTC.Format "2006-01-02T15:04:05Z" }}{{ end }}",
 	"description": "{{ .Description }}",
 	"mainEntityOfPage": {
 		"@type": "WebPage",
