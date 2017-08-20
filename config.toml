@@ -1,12 +1,14 @@
-title						= "はらぺこ屋"
-languageCode		= "ja"
-baseURL					= "http://harapeko.wktk.so/"
-theme						= "harapeko2017"
+theme           = "harapeko2017"
+baseURL         = "http://harapeko.wktk.so/"
+title           = "はらぺこ屋"
+googleanalytics = "UA-26792812-1"
+enableGitInfo   = true
 hasCJKLanguage	= true
+DefaultContentLanguage = "ja"
 
 [params]
   description = "猫と自転車と技術の日記"
-  googleanalytics = "UA-26792812-1"
+  author      = "@harapeko_wktk"
 
 [social]
   twitter = "harapeko_wktk"

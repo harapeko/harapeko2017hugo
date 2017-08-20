@@ -35,8 +35,81 @@
 	</script>
 </amp-analytics>
 {{end}}
+
 <form method="GET" action="https://www.google.co.jp/search" target="_blank">
 	<input type="hidden" name="q" value="site:{{ .Site.BaseURL }}">
 	<input type="text" name="q" placeholder="サイト内検索">
 	<input type="submit" value="検索">
 </form>
+
+{{ if .IsPage }}
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "BlogPosting",
+	"headline": "{{ .Title }}",
+	"articleSection": "{{ .Params.categories }}",
+	"genre": "{{ .Params.categories }}",
+	"keywords": "{{ range .Params.tags }}{{ . }}, {{ end }}",
+	"url": "{{ .Permalink }}",
+	"datePublished": "{{ time .Date }}",
+	{{ if not (eq .Lastmod .Date) }}"dateModified": "{{ .Lastmod }}",{{ end }}
+	"description": "{{ .Description }}",
+	"mainEntityOfPage": {
+		"@type": "WebPage",
+		"url": "{{ .Permalink }}"
+	},
+	"image": {
+		"@type": "imageObject",
+		"url": "{{ .Permalink }}{{ .Params.eyecatch }}",
+		"width": "700",
+		"height": "300"
+	},
+	"author": {
+		"@type": "Person",
+		"name": "{{ .Site.Params.author }}"
+	},
+	"publisher": {
+		"@type": "Organization",
+		"name": "はらぺこ屋",
+		"logo": {
+				"@type": "imageObject",
+				"url": "{{ .Site.BaseURL }}images/publisher_logo.jpg",
+				"width": 600,
+				"height": 60
+		}
+	}
+}
+</script>
+{{ else }}
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "WebSite",
+	"url": "{{ .Permalink }}",
+	"name": "{{ .Site.Title }}",
+		"author": {
+			"@type": "Person",
+			"name": "{{ .Site.Params.Author }}"
+		},
+	"description": "{{ .Site.Params.description }}"
+}
+</script>
+<script type="application/ld+json">
+{
+	"@context":"http://schema.org",
+	"@type":"ItemList",
+	"itemListElement":[
+		{{- range $index, $element := .Data.Pages }}
+		{{ if $index }},{{ end }}
+		{
+			"@type":"ListItem",
+			"position":{{ $index }},
+			"url":"{{ .Permalink }}"
+		}
+		{{- end }}
+	]
+}
+</script>
+{{ end }}
+
