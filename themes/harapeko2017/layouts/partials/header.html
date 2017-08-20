@@ -52,8 +52,8 @@
 	"genre": "{{ .Params.categories }}",
 	"keywords": "{{ range .Params.tags }}{{ . }}, {{ end }}",
 	"url": "{{ .Permalink }}",
-	"datePublished": "{{ time .Date }}",
-	{{ if not (eq .Lastmod .Date) }}"dateModified": "{{ .Lastmod }}",{{ end }}
+	"datePublished": "{{ .Date }}",
+	"dateModified": "{{ if (eq .Lastmod .Date) }}{{ .Date }}{{ else }}{{ .Lastmod }}{{ end }}",
 	"description": "{{ .Description }}",
 	"mainEntityOfPage": {
 		"@type": "WebPage",
