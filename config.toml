@@ -1,5 +1,5 @@
 theme           = "harapeko2017"
-baseURL         = "http://harapeko.wktk.so/"
+baseURL         = "https://machinist-switch-72660.netlify.com/"
 title           = "はらぺこ屋"
 googleanalytics = "UA-26792812-1"
 enableGitInfo   = true
