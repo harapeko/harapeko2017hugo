@@ -1,0 +1,30 @@
+{{/*
+Usage:
+{{< img class="class-something" src="https://placehold.jp/300x300.png" width="300" height="300" alt="画像自体の説明" caption="画像に添える説明" link="http://google.co.jp" target="_blank" >}}
+
+Params:
+  src*:    string  画像パス        必須
+  width:   string  横幅           初期値400
+  height:  string  高さ           初期値400
+  alt:     string  画像自体の説明
+  caption: string  画像に添える説明
+  link:    string  リンクパス
+  target:  string  リンクターゲット
+*/}}
+
+{{ if .Get "link"}}
+  <a href="{{ .Get "link" }}"{{ if .Get "target" }} target="{{ .Get "target" }}"{{ end }}>
+{{ end }}
+	<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+		<amp-img
+			src="{{ .Get "src" }}"
+			width="{{ .Get "width" | default "400" }}"
+      height="{{ .Get "height" | default "400" }}"
+      {{ if .Get "alt" }} alt="{{ .Get "alt" }}"{{ end }}
+			layout="responsive">
+		</amp-img>
+		{{ with .Get "caption" }}
+			<figcaption>{{ . }}</figcaption>
+		{{ end }}
+	</figure>
+{{ if .Get "link" }}</a>{{ end }}
