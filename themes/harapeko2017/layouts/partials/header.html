@@ -12,7 +12,7 @@
 	<script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
 	<script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
-	<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+	<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 </head>
 <body>
 {{if ne .Site.Params.googleanalytics nil}}
@@ -35,3 +35,8 @@
 	</script>
 </amp-analytics>
 {{end}}
+<form method="GET" action="https://www.google.co.jp/search" target="_blank">
+	<input type="hidden" name="q" value="site:{{ .Site.BaseURL }}">
+	<input type="text" name="q" placeholder="サイト内検索">
+	<input type="submit" value="検索">
+</form>
