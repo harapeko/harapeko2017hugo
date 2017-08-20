@@ -10,3 +10,5 @@ draft: false
 はろーはろー
 
 {{< img class="class-something" src="https://placehold.jp/300x300.png" width="300" height="300" caption="画像に添える説明文" link="http://google.co.jp" target="_blank" >}}
+
+{{< tw 899199991255678976 >}}

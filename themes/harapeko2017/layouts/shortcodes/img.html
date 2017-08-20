@@ -18,8 +18,8 @@ Params:
 	<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
 		<amp-img
 			src="{{ .Get "src" }}"
-			width="{{ .Get "width" | default "400" }}"
-      height="{{ .Get "height" | default "400" }}"
+			width="{{ .Get "width" | default "640" }}"
+      height="{{ .Get "height" | default "640" }}"
       {{ if .Get "alt" }} alt="{{ .Get "alt" }}"{{ end }}
 			layout="responsive">
 		</amp-img>
