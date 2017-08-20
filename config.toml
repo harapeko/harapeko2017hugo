@@ -5,7 +5,7 @@ theme						= "harapeko2017"
 hasCJKLanguage	= true
 
 [params]
-  description = "はらぺこ屋 猫と自転車と技術"
+  description = "猫と自転車と技術の日記"
   googleanalytics = "UA-26792812-1"
 
 [social]
