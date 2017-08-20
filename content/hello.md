@@ -14,3 +14,8 @@ draft: false
 {{< tw 899199991255678976 >}}
 
 {{< youtube 8kX5_69sO8Q >}}
+
+<amp-ad width='468' height='60' type='valuecommerce' data-sid='3359351' data-pid='884821630'></amp-ad>
+
+{{< ad title="プリスクリプション・ダイエット 療法食 RD 猫 4kg" link="http://amzn.to/2x2RGoO"
+  src="https://images-na.ssl-images-amazon.com/images/I/61p6LU2hjpL._SL1000_.jpg" width="1000" height="1000" >}}

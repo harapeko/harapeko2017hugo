@@ -1,0 +1,17 @@
+{{/*
+  Usage:
+    {{< ad title="プリスクリプション・ダイエット 療法食 RD 猫 4kg" link="http://amzn.to/2x2RGoO" src="https://images-na.ssl-images-amazon.com/images/I/61p6LU2hjpL._SL1000_.jpg" width="1000" height="1000" >}}
+
+  Params:
+    title*:  string  タイトル   必須
+    link*:   string  リンクパス 必須
+    src*:    string  画像パス   必須
+    width*:  string  横幅      必須
+    height*: string  高さ      必須
+*/}}
+<a href="{{ .Get "link" }}" target="_blank">
+  <figure>
+    <amp-img src="{{ .Get "src" }}" width="{{ .Get "width" }}" height="{{ .Get "height" }}" alt="{{ .Get "title" }}"></amp-img>
+    <figcaption>{{ .Get "title" }}</figcaption>
+  </figure>
+</a>

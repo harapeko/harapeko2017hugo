@@ -24,3 +24,7 @@ harapeko2017 by HUGO
 
 ## amp-youtube
 `{{< youtube lBTCB7yLs8YTTTTT >}}`
+
+## ad
+*例: amazon*
+`{{< ad title="プリスクリプション・ダイエット 療法食 RD 猫 4kg" link="http://amzn.to/2x2RGoO" src="https://images-na.ssl-images-amazon.com/images/I/61p6LU2hjpL._SL1000_.jpg" width="1000" height="1000" >}}`
