@@ -13,3 +13,6 @@ DefaultContentLanguage = "ja"
 [social]
   twitter = "harapeko_wktk"
   github = "harapeko"
+
+[permalinks]
+  food = "/:section/:year/:month/:title/"
