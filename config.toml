@@ -16,4 +16,7 @@ Paginate = 11
   github = "harapeko"
 
 [permalinks]
-  food = "/:section/:year/:month/:title/"
+  food = "/:section/:title/"
+  自転車 = "/:section/:title/"
+  猫 = "/:section/:title/"
+  技術 = "/:section/:title/"
