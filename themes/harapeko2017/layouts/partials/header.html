@@ -42,6 +42,23 @@
 	<input type="submit" value="検索">
 </form>
 
+<nav>
+	<ul>
+		{{ if or (eq "food" .Type) (eq "猫" .Type) (eq "技術" .Type) }}
+			<li><a href="/">HOME</a></li>
+		{{end}}
+		{{ if ne "food" .Type }}
+			<li><a href="/自転車/">自転車</a></li>
+		{{end}}
+		{{ if ne "猫" .Type }}
+			<li><a href="/猫/">猫</a></li>
+		{{end}}
+		{{ if ne "技術" .Type }}
+			<li><a href="/技術/">技術</a></li>
+		{{end}}
+	</ul>
+</nav>
+
 {{ if .IsPage }}
 <script type="application/ld+json">
 {
