@@ -5,6 +5,7 @@ googleanalytics = "UA-26792812-1"
 enableGitInfo   = true
 hasCJKLanguage	= true
 DefaultContentLanguage = "ja"
+Paginate = 11
 
 [params]
   description = "猫と自転車と技術の日記"

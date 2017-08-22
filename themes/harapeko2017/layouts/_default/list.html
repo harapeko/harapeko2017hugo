@@ -3,10 +3,13 @@
 <div class="wrapper">
 	<main>
 		<ul>
-			{{- range .Data.Pages }}
+			{{ range .Paginator.Pages }}
 				{{ .Render "li" }}
-			{{- end }}
+			{{ end }}
 		</ul>
+
+    {{ partial "pagination.html" . }}
+
 	</main>
 
 	{{ partial "sidebar.html" . }}

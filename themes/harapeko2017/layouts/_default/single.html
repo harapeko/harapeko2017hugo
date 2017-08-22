@@ -19,14 +19,14 @@
 
 			{{ with .Params.categories }}
 				<div>
-					<a href="/category/{{ . }}">{{ . }}</a>
+					<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
 				</div>
 			{{ end }}
 
 			{{ with .Params.tags }}
 				<div>
 					{{ range . }}
-						<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
+						<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
 					{{ end }}
 				</div>
 			{{ end }}
