@@ -14,16 +14,16 @@ Params:
 {{ if .Get "link"}}
   <a href="{{ .Get "link" }}"{{ if .Get "target" }} target="{{ .Get "target" }}"{{ end }}>
 {{ end }}
-	<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
-		<amp-img
-			src="{{ .Get "src" }}"
-			width="{{ .Get "width" | default "640" }}"
+  <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+    <amp-img
+      src="{{ .Get "src" }}"
+      width="{{ .Get "width" | default "640" }}"
       height="{{ .Get "height" | default "640" }}"
       {{ if .Get "alt" }} alt="{{ .Get "alt" }}"{{ end }}
-			layout="responsive">
-		</amp-img>
-		{{ with .Get "caption" }}
-			<figcaption>{{ . }}</figcaption>
-		{{ end }}
-	</figure>
+      layout="responsive">
+    </amp-img>
+    {{ with .Get "caption" }}
+      <figcaption>{{ . }}</figcaption>
+    {{ end }}
+  </figure>
 {{ if .Get "link" }}</a>{{ end }}

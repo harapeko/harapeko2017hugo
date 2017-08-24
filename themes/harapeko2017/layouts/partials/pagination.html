@@ -1,46 +1,46 @@
 {{ $pages := .Paginator }}
 {{ if gt $pages.TotalPages 1 }}
-    <nav class="st-pagination">
-        <ul class="list">
-            {{ if ne $pages.First.PageNumber $pages.PageNumber }}
-                <li class="item">
-                    <a href="{{ $pages.First.URL }}">
-                        <span>&laquo;</span>
-                    </a>
-                </li>
-            {{ end }}
+  <nav class="st-pagination">
+    <ul class="list">
+      {{ if ne $pages.First.PageNumber $pages.PageNumber }}
+        <li class="item">
+          <a href="{{ $pages.First.URL }}">
+            <span>&laquo;</span>
+          </a>
+        </li>
+      {{ end }}
 
-            {{ if $pages.HasPrev }}
-                <li class="item">
-                    <a href="{{ $pages.Prev.URL }}">
-                        <span>&lt;</span>
-                    </a>
-                </li>
-            {{ end }}
+      {{ if $pages.HasPrev }}
+        <li class="item">
+          <a href="{{ $pages.Prev.URL }}">
+            <span>&lt;</span>
+          </a>
+        </li>
+      {{ end }}
 
-            {{ range $pages.Pagers }}
-                <li class="item {{ if eq . $pages }}-current{{ end }}">
-                    <a href="{{ .URL }}">
-                        <span>{{ .PageNumber }}</span>
-                    </a>
-                </li>
-            {{ end }}
+      {{ range $pages.Pagers }}
+        <li class="item {{ if eq . $pages }}-current{{ end }}">
+          <a href="{{ .URL }}">
+            <span>{{ .PageNumber }}</span>
+          </a>
+        </li>
+      {{ end }}
 
-            {{ if $pages.HasNext }}
-                <li class="item">
-                    <a href="{{ $pages.Next.URL }}">
-                        <span>&gt;</span>
-                    </a>
-                </li>
-            {{ end }}
+      {{ if $pages.HasNext }}
+        <li class="item">
+          <a href="{{ $pages.Next.URL }}">
+            <span>&gt;</span>
+          </a>
+        </li>
+      {{ end }}
 
-            {{ if ne $pages.Last.PageNumber $pages.PageNumber }}
-                <li class="item">
-                    <a href="{{ $pages.Last.URL }}">
-                        <span>&raquo;</span>
-                    </a>
-                </li>
-            {{ end }}
-        </ul>
-    </nav>
+      {{ if ne $pages.Last.PageNumber $pages.PageNumber }}
+        <li class="item">
+          <a href="{{ $pages.Last.URL }}">
+            <span>&raquo;</span>
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
 {{ end }}

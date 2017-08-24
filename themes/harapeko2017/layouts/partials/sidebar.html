@@ -1,20 +1,20 @@
 <div class="wrapper">
-	<aside>
-		<h2>最近の投稿</h2>
-		{{ range .Data.Pages.GroupBy "Section" "desc" }}
-			{{ with .Key }}
-				<h3>{{ . }}</h3>
-			{{ end }}
-			<ul>
-				{{ range .Pages.ByTitle }}
-					{{ .Render "recent_li" }}
-				{{ end }}
-			</ul>
-		{{ end }}
-	</aside>
+  <aside>
+    <h2>最近の投稿</h2>
+    {{ range .Data.Pages.GroupBy "Section" "desc" }}
+      {{ with .Key }}
+        <h3>{{ . }}</h3>
+      {{ end }}
+      <ul>
+        {{ range .Pages.ByTitle }}
+          {{ .Render "recent_li" }}
+        {{ end }}
+      </ul>
+    {{ end }}
+  </aside>
 
-	<aside>
-		<h2>ad</h2>
-		<p>TODO</p>
-	</aside>
+  <aside>
+    <h2>ad</h2>
+    <p>TODO</p>
+  </aside>
 </div>

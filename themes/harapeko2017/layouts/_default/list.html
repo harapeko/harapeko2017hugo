@@ -1,18 +1,18 @@
 {{ partial "header.html" . }}
 
 <div class="wrapper">
-	<main>
-		<ul>
-			{{ range .Paginator.Pages }}
-				{{ .Render "li" }}
-			{{ end }}
-		</ul>
+  <main>
+    <ul>
+      {{ range .Paginator.Pages }}
+        {{ .Render "li" }}
+      {{ end }}
+    </ul>
 
     {{ partial "pagination.html" . }}
 
-	</main>
+  </main>
 
-	{{ partial "sidebar.html" . }}
+  {{ partial "sidebar.html" . }}
 </div>
 
 {{ partial "footer.html" . }}
