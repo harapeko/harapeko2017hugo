@@ -1,13 +1,13 @@
 theme           = "harapeko2017"
 baseURL         = "https://machinist-switch-72660.netlify.com/"
 title           = "はらぺこ屋"
-googleanalytics = "UA-26792812-1"
 enableGitInfo   = true
 hasCJKLanguage	= true
 DefaultContentLanguage = "ja"
 Paginate = 11
 
 [params]
+  googleanalytics = "UA-26792812-1"
   description = "猫と自転車と技術の日記"
   author      = "@harapeko_wktk"
 
