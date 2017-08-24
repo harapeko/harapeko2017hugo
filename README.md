@@ -37,6 +37,20 @@ harapeko2017 by HUGO
 {{< youtube lBTCB7yLs8YTTTTT >}}
 ```
 
+## amazon
+
+### 通常
+```html
+{{< amzn B07496Z2GC >}}
+```
+
+### 画像指定したい時に使用する(URLは記号があるので「""」で囲みます)
+
+```html
+{{< amzn B07496Z2GC "http://google.co.jp/" >}}
+```
+
+
 ## ad
 **例: amazon**
 

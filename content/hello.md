@@ -19,3 +19,5 @@ draft: false
 
 {{< ad title="プリスクリプション・ダイエット 療法食 RD 猫 4kg" link="http://amzn.to/2x2RGoO"
   src="https://images-na.ssl-images-amazon.com/images/I/61p6LU2hjpL._SL1000_.jpg" width="1000" height="1000" >}}
+
+{{< amzn B07496Z2GC "http://google.co.jp/" >}}
