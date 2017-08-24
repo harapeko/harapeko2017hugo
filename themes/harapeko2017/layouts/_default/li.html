@@ -1,11 +1,7 @@
 <li>
   <h2>{{ .Title }}</h2>
 
-  {{if gt (len .Summary) 200}}
-    <p>{{slicestr .Summary 3 200 }}</p>
-  {{else}}
-    <p>{{ .Summary }}</p>
-  {{end}}
+  <p>{{ .Summary | truncate 200 }}</p>
 
   <a href="{{ .Permalink }}">Read more…</a>
 </li>
