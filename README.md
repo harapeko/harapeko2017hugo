@@ -1,6 +1,9 @@
 # harapeko2017hugo
 harapeko2017 by HUGO
 
+# development
+https://machinist-switch-72660.netlify.com/
+
 # shortcordes
 
 ## amp-img
