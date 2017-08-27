@@ -31,16 +31,21 @@
     overflow-y: scroll
     z-index: $zi-s
 
-    &::-webkit-scrollbar
-      width: $margin
-      background-color: $color-white
-    &::-webkit-scrollbar-thumb
-      background-color: $color-text
-      border: 1px solid lighten($color-text, 10%)
-
     &:hover
       background-color: #efefef
       transition: background-color .5s
+
+    &::-webkit-scrollbar
+      width: $margin
+      background-color: transparent
+
+    &:hover::-webkit-scrollbar
+      width: $margin
+      background-color: $color-white
+
+    &:hover::-webkit-scrollbar-thumb
+      background-color: $color-text
+      border: 1px solid lighten($color-text, 10%)
 
     +pc
       flex: none
