@@ -4,10 +4,10 @@ body
   display: block
 
 // SETTINGS: プリプロセッサで利用するグローバル変数や全体の設定
-// @import "_settings.variables"
+@import "_settings.variables"
 
 // TOOLS: プリプロセッサで利用するmixinやfunctionなど
-// @import "_tools.mixin"
+@import "_tools.mixin"
 // @import "_tools.function"
 
 // GENERIC: 基礎スタイル。normalize.css、reset, box-sizingなど
@@ -27,12 +27,13 @@ body
 // tp-(TopPage)...サイトトップページ
 // ap-(AboutUsPage)...協会情報ページ
 // ip-(InquiriesPage)...お問い合わせページ
-// @import "_components.st-body"
-// @import "_components.st-header"
+@import "_components.st-body"
+@import "_components.st-wrapper"
+@import "_components.st-header"
 // @import "_components.st-nav"
 // @import "_components.st-bread"
 // @import "_components.st-main"
-// @import "_components.st-footer"
+@import "_components.st-footer"
 // @import "_components.st-copy"
 
 // @import "_components.sc-h1"
@@ -54,4 +55,4 @@ body
 // @import "_components.ip-formlayout"
 
 // TRUMPS
-// @import "_trumps.dirty"
+@import "_trumps"

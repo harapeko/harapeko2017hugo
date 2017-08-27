@@ -1,0 +1,26 @@
+.st-header
+  display: flex
+  align-items: center
+  width: 100vw
+  height: 50px
+
+  // サイト名領域
+  >.sitename
+    flex: 1
+
+    >.title
+      margin: $margin
+      font-size: 3rem
+
+    >.title >.link
+      color: $color-text
+
+  // 検索領域
+  >.search
+    display: flex
+    align-items: flex-end
+    margin: $margin
+
+  >.search >.form >.input,
+  >.search >.form >.submit
+    margin-bottom: 0

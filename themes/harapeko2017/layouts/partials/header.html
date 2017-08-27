@@ -20,7 +20,7 @@
   <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
   <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 </head>
-<body>
+<body class="st-body">
 {{ if ne .Site.Params.googleanalytics "" }}
 <amp-analytics type="googleanalytics" id="analytics">
   <script type="application/json">
@@ -41,29 +41,6 @@
   </script>
 </amp-analytics>
 {{ end }}
-
-<form method="GET" action="https://www.google.co.jp/search" target="_blank">
-  <input type="hidden" name="q" value="site:{{ .Site.BaseURL }}">
-  <input type="text" name="q" placeholder="サイト内検索">
-  <input type="submit" value="検索">
-</form>
-
-<nav>
-  <ul>
-    {{ if or (eq "food" .Type) (eq "猫" .Type) (eq "技術" .Type) }}
-      <li><a href="/">HOME</a></li>
-    {{end}}
-    {{ if ne "food" .Type }}
-      <li><a href="/自転車/">自転車</a></li>
-    {{end}}
-    {{ if ne "猫" .Type }}
-      <li><a href="/猫/">猫</a></li>
-    {{end}}
-    {{ if ne "技術" .Type }}
-      <li><a href="/技術/">技術</a></li>
-    {{end}}
-  </ul>
-</nav>
 
 {{ if .IsPage }}
 <script type="application/ld+json">
@@ -136,3 +113,35 @@
 </script>
 {{ end }}
 
+<header class="st-header">
+  <section class="sitename">
+      <h1 class="title"><a class="link" href="/">{{ .Site.Title }}</a></h1>
+  </section>
+
+  <div class="search">
+    <form class="form" method="GET" action="https://www.google.co.jp/search" target="_blank">
+      <input type="hidden" name="q" value="site:{{ .Site.BaseURL }}">
+      <input class="input" type="text" name="q" placeholder="サイト内検索">
+      <input class="submit" type="submit" value="検索">
+    </form>
+  </div>
+</header>
+
+{{/* TODO：あとでけす
+<nav>
+  <ul>
+    {{ if or (eq "food" .Type) (eq "猫" .Type) (eq "技術" .Type) }}
+      <li><a href="/">HOME</a></li>
+    {{end}}
+    {{ if ne "food" .Type }}
+      <li><a href="/自転車/">自転車</a></li>
+    {{end}}
+    {{ if ne "猫" .Type }}
+      <li><a href="/猫/">猫</a></li>
+    {{end}}
+    {{ if ne "技術" .Type }}
+      <li><a href="/技術/">技術</a></li>
+    {{end}}
+  </ul>
+</nav>
+*/}}

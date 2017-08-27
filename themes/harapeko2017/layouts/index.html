@@ -1,20 +1,35 @@
 {{ partial "header.html" . }}
 
-<h1>{{ .Site.Title }}</h1>
-
-<div class="wrapper">
-  <main>
-    <ul>
-      {{ range .Paginator.Pages }}
-        {{ .Render "li" }}
-      {{ end }}
-    </ul>
-
-    {{ partial "pagination.html" . }}
-
+<div class="st-wrapper">
+  <main class="right">
+    <div class="column">
+      <h2>カテゴリ1</h2>
+      <ul>
+          {{ range .Paginator.Pages }}
+            {{ .Render "li" }}
+          {{ end }}
+      </ul>
+    </div>
+    <div class="column">
+      <h2>カテゴリ2</h2>
+      <ul>
+          {{ range .Paginator.Pages }}
+            {{ .Render "li" }}
+          {{ end }}
+      </ul>
+    </div>
+    <div class="column">
+      <h2>カテゴリ3</h2>
+      <ul>
+          {{ range .Paginator.Pages }}
+            {{ .Render "li" }}
+          {{ end }}
+      </ul>
+    </div>
   </main>
-
-  {{ partial "sidebar.html" . }}
-</div>
+  <div class="left">
+      {{ partial "sidebar.html" . }}
+  </div>
+</div><!--/.st-wrapper-->
 
 {{ partial "footer.html" . }}

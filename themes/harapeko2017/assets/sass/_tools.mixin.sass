@@ -1,0 +1,18 @@
+///*------------------------------------*\
+//    #Mixin
+//\*------------------------------------*/
+
+// SP用メディアクエリ(基本的に使わない)
+=sp
+  @media screen and (max-width: $mobile)
+    @content
+
+// Tablet用メディアクエリ
+=tab
+  @media screen and (min-width: $mobile + 1px)
+    @content
+
+// PC用メディアクエリ
+=pc
+  @media screen and (min-width: $tablet + 1px)
+    @content

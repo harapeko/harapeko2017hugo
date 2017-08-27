@@ -1,0 +1,43 @@
+///*------------------------------------*\
+//    #margin
+//\*------------------------------------*/
+
+// 省略記号の意味
+// m - margin
+// a - all
+// t, r, b, l - top, right, bottom, left
+// x, y - top and bottom, right and left
+// 0, s, m - zero, small, medium
+
+$trump-margins: ("0": 0, "s": $margin, "m": $margin * 2, "l": $margin * 2) !default
+
+@each $key, $value in $trump-margins
+  // all
+  ._ma#{$key}
+    margin: $value
+
+  // top
+  ._mt#{$key}
+    margin-top: $value
+
+  // right
+  ._mr#{$key}
+    margin-right: $value
+
+  // bottom
+  ._mb#{$key}
+    margin-bottom: $value
+
+  // left
+  ._ml#{$key}
+    margin-left: $value
+
+  // top, bottom
+  ._my#{$key}
+    margin-top: $value
+    margin-bottom: $value
+
+  // right, left
+  ._mx#{$key}
+    margin-right: $value
+    margin-left: $value

@@ -1,0 +1,47 @@
+.st-wrapper
+  display: flex
+  width: 100vw
+
+  +tab
+    height: calc(100vh - 50px - 40px)
+
+  >.left
+    order: 0
+    display: none
+    width: 200px
+    overflow-y: scroll
+    background-color: tan
+
+    +pc
+      display: block
+
+  >.right
+    display: block
+    order: 1
+    flex: 1
+    background-color: skyblue
+
+    +tab
+      display: flex
+
+  >.right >.column
+    flex: 1
+    padding-left: $margin
+    padding-right: $margin
+    overflow-y: scroll
+    z-index: $zi-s
+
+    &::-webkit-scrollbar
+      width: $margin
+      background-color: $color-white
+    &::-webkit-scrollbar-thumb
+      background-color: $color-text
+      border: 1px solid lighten($color-text, 10%)
+
+    &:hover
+      background-color: #efefef
+      transition: background-color .5s
+
+    +pc
+      flex: none
+      width: 360px
