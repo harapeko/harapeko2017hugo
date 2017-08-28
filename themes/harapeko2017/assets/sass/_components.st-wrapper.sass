@@ -1,6 +1,8 @@
 .st-wrapper
   display: flex
   width: 100vw
+  border-top: 1px solid $color-gray
+  border-bottom: 1px solid $color-gray
 
   +tab
     height: calc(100vh - 50px - 40px)
@@ -9,17 +11,18 @@
     order: 0
     display: none
     width: 200px
+    padding: $margin
+    border-right: 1px solid $color-gray
     overflow-y: scroll
-    background-color: tan
 
     +pc
       display: block
+      flex: none
 
   >.right
     display: block
     order: 1
     flex: 1
-    background-color: skyblue
 
     +tab
       display: flex
