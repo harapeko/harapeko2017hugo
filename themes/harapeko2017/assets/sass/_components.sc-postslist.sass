@@ -1,11 +1,18 @@
 .sc-postslist
   // タイトル
   >.title
-    height: 50px
+    height: 40px
     margin-top: 0
     margin-bottom: 0
     padding: $margin
-    font-size: 2.5rem
+    font-size: 2rem
+    text-align: right
+
+    +tab
+      text-align: left
+
+  >.title >.link
+
 
   >.list
     margin-top: 0
@@ -15,14 +22,30 @@
     overflow-y: scroll
 
     +tab
-      height: calc(100vh - 50px - 40px - 50px)
+      // 142px = 40 + 40 + 40 + 2
+      height: calc(100vh - 122px)
 
   >.list >.item
     margin-bottom: 0
 
+    &:nth-child(n+5)
+      display: none
+
+    +tab
+      &:nth-child(n+5)
+        display: block
+
   >.list >.item >.link
+    display: flex
+
+    &:hover
+      border-style: none
+
+    +tab
+      display: block
 
   >.list >.item >.link >.figure
+    width: 50vw
     position: relative
     margin: 0
     overflow: hidden
@@ -45,7 +68,9 @@
       left: 0
       width: 100%
       height: 100%
-      border-radius: $margin
+
+    +tab
+      width: 100%
 
   >.list >.item >.link:hover >.figure::before
     transform: scale(.95, .9)
@@ -64,21 +89,25 @@
     transform: scale(1.1)
 
   >.list >.item >.link >.info
-    width: 100%
-    padding: $margin
+    width: 50vw
+    padding: $margin / 2
     background-color: $color-white
+
+    +tab
+      width: 100%
 
   >.list >.item >.link >.info >.date
     display: inline
+    line-height: 1
     font-size: 1rem
-    font-weight: bold
     color: lighten($color-text, 20%)
-    border-bottom: 1px solid currentColor
+    text-decoration: underline
 
   >.list >.item >.link >.info >.title
     height: 2em
-    margin-top: 1rem
+    margin-top: .5rem
     margin-bottom: 0
+    line-height: 1
     font-size: 1.4rem
     color: $color-text
     overflow: hidden

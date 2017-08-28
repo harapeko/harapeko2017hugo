@@ -2,7 +2,10 @@
   display: flex
   align-items: center
   width: 100vw
-  height: 50px
+  height: 40px
+
+  +pc
+    width: $desktop
 
   // サイト名領域
   >.sitename
@@ -10,7 +13,10 @@
 
     >.title
       margin: $margin
-      font-size: 3rem
+      font-size: 1.6rem
+
+      +tab
+        font-size: 2rem
 
     >.title >.link
       color: $color-text
