@@ -1,11 +1,17 @@
 <div class="st-sidebar">
-  <aside>
-    <h2>Profile</h2>
-    <amp-img src="https://placehold.jp/180x180.png" width="180" height="180" alt="avatar">
-
+  <aside class="profile">
+    <figure class="figure">
+      <amp-img class="img" src="/images/components/st-sidebar/harapeko.jpg" width="180" height="180" alt="飼われてる人 はらぺこ" title="飼われてる人 はらぺこ"></amp-img>
+      <figcaption class="caption">飼われてる人 はらぺこ</figcaption>
+    </figure>
+    <figure class="figure">
+        <amp-img class="img" src="/images/components/st-sidebar/happy.jpg" width="180" height="180" alt="飼い主 はっぴー" title="飼い主 はっぴー"></amp-img>
+      <figcaption class="caption">飼い主 はっぴー</figcaption>
+    </figure>
   </aside>
 
   <!-- TODO：廃止予定 -->
+  {{/*
   <aside>
     <h2>最近の投稿</h2>
     {{ range .Data.Pages.GroupBy "Section" "desc" }}
@@ -19,9 +25,28 @@
       </ul>
     {{ end }}
   </aside>
+  */}}
 
-  <aside>
-    <h2>ad</h2>
-    <p>TODO</p>
+  <aside class="ads">
+    <ul class="list">
+      <li class="item"><a class="link" href="http://amzn.to/2vxShho">
+        <figure class="figure">
+          <amp-img class="img" src="https://images-na.ssl-images-amazon.com/images/I/41V8HDTIenL.jpg" width="180" height="180"></amp-img>
+          <figcaption class="caption">キャティーマン (CattyMan) じゃれ猫 宙返り</figcaption>
+        </figure>
+      </a></li>
+      <li class="item"><a class="link" href="http://amzn.to/2vxShho">
+        <figure class="figure">
+          <amp-img class="img" src="https://images-na.ssl-images-amazon.com/images/I/41V8HDTIenL.jpg" width="180" height="180"></amp-img>
+          <figcaption class="caption">キャティーマン (CattyMan) じゃれ猫 宙返り</figcaption>
+        </figure>
+      </a></li>
+      <li class="item"><a class="link" href="http://amzn.to/2vxShho">
+        <figure class="figure">
+          <amp-img class="img" src="https://images-na.ssl-images-amazon.com/images/I/41V8HDTIenL.jpg" width="180" height="180"></amp-img>
+          <figcaption class="caption">キャティーマン (CattyMan) じゃれ猫 宙返り</figcaption>
+        </figure>
+      </a></li>
+    </ul>
   </aside>
-</div>
+</div><!--/.st-sidebar-->
