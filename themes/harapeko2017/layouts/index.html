@@ -3,28 +3,58 @@
 <div class="st-wrapper">
   <main class="right">
     <div class="column">
-      <h2>カテゴリ1</h2>
-      <ul>
-          {{ range .Paginator.Pages }}
-            {{ .Render "li" }}
-          {{ end }}
-      </ul>
+      <section class="sc-postslist">
+        <h2 class="title">自転車</h2>
+        <ul class="list">
+            {{ range .Paginator.Pages }}
+              <li class="item"><a class="link" href="{{ .Permalink }}" title="{{ .Title }}">
+                <figure class="figure">
+                  <amp-img class="img" src="http://lorempixel.com/300/130/" width="300" height="130" layout="responsive"></amp-img>
+                </figure>
+                <div class="info">
+                  <p class="date">{{ .Date.Format "2006/1/2" }}</p>
+                  <h3 class="title">{{ .Title }}</h3>
+                </div>
+              </a></li>
+            {{ end }}
+        </ul>
+      </section><!--/.sc-postslist-->
     </div>
     <div class="column">
-      <h2>カテゴリ2</h2>
-      <ul>
-          {{ range .Paginator.Pages }}
-            {{ .Render "li" }}
-          {{ end }}
-      </ul>
+      <section class="sc-postslist">
+        <h2 class="title">自転車</h2>
+        <ul class="list">
+            {{ range .Paginator.Pages }}
+              <li class="item"><a class="link" href="{{ .Permalink }}" title="{{ .Title }}">
+                <figure class="figure">
+                  <amp-img class="img" src="http://lorempixel.com/300/130/" width="300" height="130" layout="responsive"></amp-img>
+                </figure>
+                <div class="info">
+                  <p class="date">{{ .Date.Format "2006/1/2" }}</p>
+                  <h3 class="title">{{ .Title }}</h3>
+                </div>
+              </a></li>
+            {{ end }}
+        </ul>
+      </section><!--/.sc-postslist-->
     </div>
     <div class="column">
-      <h2>カテゴリ3</h2>
-      <ul>
-          {{ range .Paginator.Pages }}
-            {{ .Render "li" }}
-          {{ end }}
-      </ul>
+      <section class="sc-postslist">
+        <h2 class="title">自転車</h2>
+        <ul class="list">
+            {{ range .Paginator.Pages }}
+              <li class="item"><a class="link" href="{{ .Permalink }}" title="{{ .Title }}">
+                <figure class="figure">
+                  <amp-img class="img" src="http://lorempixel.com/300/130/" width="300" height="130" layout="responsive"></amp-img>
+                </figure>
+                <div class="info">
+                  <p class="date">{{ .Date.Format "2006/1/2" }}</p>
+                  <h3 class="title">{{ .Title }}</h3>
+                </div>
+              </a></li>
+            {{ end }}
+        </ul>
+      </section><!--/.sc-postslist-->
     </div>
   </main>
   <div class="left">

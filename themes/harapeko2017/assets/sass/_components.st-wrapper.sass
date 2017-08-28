@@ -1,55 +1,35 @@
 .st-wrapper
   display: flex
   width: 100vw
+  height: calc(100vh - 50px - 40px)
   border-top: 1px solid $color-gray
   border-bottom: 1px solid $color-gray
+  overflow-y: scroll
 
   +tab
-    height: calc(100vh - 50px - 40px)
+    overflow: visible
 
   >.left
-    order: 0
     display: none
-    width: 200px
-    padding: $margin
-    border-right: 1px solid $color-gray
-    overflow-y: scroll
 
     +pc
+      order: 0
       display: block
       flex: none
+      width: 200px
+      padding: $margin
+      border-right: 1px solid $color-gray
+      overflow-y: scroll
 
   >.right
     display: block
-    order: 1
     flex: 1
 
     +tab
       display: flex
 
+    +pc
+      order: 1
+
   >.right >.column
     flex: 1
-    padding-left: $margin
-    padding-right: $margin
-    overflow-y: scroll
-    z-index: $zi-s
-
-    &:hover
-      background-color: #efefef
-      transition: background-color .5s
-
-    &::-webkit-scrollbar
-      width: $margin
-      background-color: transparent
-
-    &:hover::-webkit-scrollbar
-      width: $margin / 2
-      background-color: $color-white
-
-    &:hover::-webkit-scrollbar-thumb
-      background-color: $color-text
-      border: 1px solid lighten($color-text, 10%)
-
-    +pc
-      flex: none
-      width: 360px
