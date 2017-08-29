@@ -1,7 +1,8 @@
 {{ partial "header.html" . }}
 
-<div class="wrapper">
-  <main>
+<div class="st-wrapper">
+  <main class="right">
+    {{/*TODO：一覧のレイアウト*/}}
     <ul>
       {{ range .Paginator.Pages }}
         {{ .Render "li" }}
@@ -9,10 +10,10 @@
     </ul>
 
     {{ partial "pagination.html" . }}
-
   </main>
-
-  {{ partial "sidebar.html" . }}
-</div>
+  <div class="left">
+    {{ partial "sidebar.html" . }}
+  </div>
+</div><!--/.st-wrapper-->
 
 {{ partial "footer.html" . }}

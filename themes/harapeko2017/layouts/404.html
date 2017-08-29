@@ -1,5 +1,13 @@
 {{ partial "header.html" . }}
 
-<h1>this is 404</h1>
+<div class="st-wrapper">
+  <main class="right">
+    {{/*TODO：404のレイアウト*/}}
+    <h1>this is 404</h1>
+  </main>
+  <div class="left">
+    {{ partial "sidebar.html" . }}
+  </div>
+</div><!--/.st-wrapper-->
 
 {{ partial "footer.html" . }}
