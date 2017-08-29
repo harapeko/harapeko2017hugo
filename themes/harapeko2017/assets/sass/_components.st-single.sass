@@ -1,9 +1,13 @@
 .st-single
-  width: 100%
+  width: 100vw
   max-width: $desktop-right
   height: $content-height
   padding: $margin
+  overflow-x: hidden
   overflow-y: scroll
+
+  +pc
+    width: 100%
 
   // アイキャッチ
   >.eyecatch
