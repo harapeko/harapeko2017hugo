@@ -1,0 +1,82 @@
+.st-single
+  width: 100%
+  max-width: $desktop-right
+  height: $content-height
+  padding: $margin
+  overflow-y: scroll
+
+  // アイキャッチ
+  >.eyecatch
+    max-width: 700px
+    margin: 0 auto ($margin * 2)
+
+  >.eyecatch >.img
+
+  >.postheader
+    text-align: center
+
+  // 記事タイトル
+  >.postheader >.posttile
+    position: relative
+    display: inline-block
+    margin: 0 ($margin * 1.5) ($margin / 2)
+    padding: 1rem
+    text-align: center
+    color: lighten($color-text, 20%)
+    line-height: 1
+
+    &::before,
+    &::after
+      content: ""
+      position: absolute
+      border-width: 1px
+      border-color: currentColor
+      width: ($margin * 3)
+      height: ($margin * 3)
+
+    &::before
+      top: 0
+      left: 0
+      border-top-style: solid
+      border-left-style: solid
+
+    &::after
+      right: 0
+      bottom: 0
+      border-right-style: solid
+      border-bottom-style: solid
+
+  // 記事日付
+  >.postheader >.postdate
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: ($margin / 2)
+
+    >.time
+      text-align: center
+      font-size: 1.4rem
+      color: currentColor
+
+    &:before
+      content: ""
+      width: 3rem
+      height: 24px
+      background-image: url('/images/components/st-postcontents/calendar.png')
+      background-repeat: no-repeat
+
+  >.postheader >.taxonomy
+    display: flex
+    justify-content: center
+    margin-bottom: $margin
+    font-size: 1.6rem
+
+  >.postheader >.taxonomy >.categories,
+  >.postheader >.taxonomy >.tags
+    margin-right: 2rem
+
+  >.postheader >.taxonomy >.categories >.link,
+  >.postheader >.taxonomy >.tags >.link
+    &:not(:last-child)::after
+      content: ","
+      margin-right: .5rem

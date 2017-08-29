@@ -2,35 +2,36 @@
 
 <div class="st-wrapper">
   <main class="right">
-    {{/*TODO：個別記事のレイアウト*/}}
-    <article>
-      <h1>{{ .Title }}</h1>
-
-      <time>{{ .Date.Format "2006/1/2" }}</time>
-
+    <article class="st-single">
       {{ with .Params.eyecatch }}
-        <amp-img
-        src="{{ . }}"
-        alt="TODO"
-        width="700"
-        height="300"
-        layout="responsive">
-        </amp-img>
+        <figure class="eyecatch">
+          <amp-img class="img" src="{{ . }}" alt="TODO" width="700" height="300" layout="responsive"></amp-img>
+        </figure>
       {{ end }}
 
-      {{ with .Params.categories }}
-        <div>
-          <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+      <div class="postheader">
+        <div class="postdate">
+          <time class="time">{{ .Date.Format "2006/1/2" }}</time>
         </div>
-      {{ end }}
 
-      {{ with .Params.tags }}
-        <div>
-          {{ range . }}
-            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+        <div class="taxonomy">
+          <div class="categories">カテゴリ：
+            {{ with .Params.categories }}
+              <a class="link" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+          </div>
+
+          {{ with .Params.tags }}
+            <div class="tags">タグ：
+              {{ range . }}
+                <a class="link" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+              {{ end }}
+            </div>
           {{ end }}
         </div>
-      {{ end }}
+
+        <h1 class="posttile">{{ .Title }}</h1>
+      </div><!--/.postheader-->
 
       <div class="post-content">{{ .Content }}</div>
     </article>
