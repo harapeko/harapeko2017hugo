@@ -37,3 +37,12 @@
 
     +pc
       max-width: 300px
+
+  >.right >.onecolumn
+    width: 100%
+    // 82 = 80 + 1 + 1
+    height: calc(100vh - 82px)
+    overflow-y: scroll
+
+    +pc
+      max-width: $desktop-right
