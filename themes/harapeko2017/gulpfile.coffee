@@ -23,6 +23,7 @@ sass_compile_process = (in_path, out_path, dest_file_name = 'app.css') ->
   .pipe $.plumber()
   .pipe $.sass
     includePaths: "node_modules/sakura.css/scss"
+  .pipe $.replace /@charset "UTF-8";/g, ''
   .pipe $.cssnano
     autoprefixer:
       browsers: support_browsers
