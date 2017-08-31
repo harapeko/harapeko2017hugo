@@ -4,7 +4,7 @@ title           = "はらぺこ屋"
 enableGitInfo   = true
 hasCJKLanguage	= true
 DefaultContentLanguage = "ja"
-Paginate = 11
+Paginate = 12
 
 [params]
   googleanalytics = "UA-26792812-1"

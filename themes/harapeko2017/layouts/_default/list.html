@@ -2,14 +2,34 @@
 
 <div class="st-wrapper">
   <main class="right">
-    {{/*TODO：一覧のレイアウト*/}}
-    <ul>
-      {{ range .Paginator.Pages }}
-        {{ .Render "li" }}
-      {{ end }}
-    </ul>
+    <div class="st-archive">
+      <div class="inner">
+        {{ range .Paginator.Pages.GroupByDate "2006年01月" }}
+          <section class="section">
+            <h3 class="head">
+              <p class="yearmonth">{{ .Key }}</p>
+            </h3>
 
-    {{ partial "pagination.html" . }}
+            <ul class="list">
+              {{ range .Pages }}
+                <li class="item"><a class="media" href="{{ .Permalink }}">
+                  <figure class="figure">
+                    {{/*TODO 後で差し替える<img src="{{ .Params.eyecatch }}" alt="#TODO">*/}}
+                    <img src="https://placehold.jp/700x300.png" alt="">
+                  </figure>
+                  <div class="info">
+                    <p class="date">{{ .Date.Format "02日" }}</p>
+                    <p class="title">{{ .Title }}</p>
+                  </div>
+                </a></li>
+              {{ end }}
+            </ul>
+          </section>
+        {{ end }}
+
+        {{ partial "pagination.html" . }}
+      </div>
+    </div><!--/.st-archive-->
   </main>
   <div class="left">
     {{ partial "sidebar.html" . }}
