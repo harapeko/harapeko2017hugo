@@ -6,9 +6,9 @@
       <div class="inner">
         {{ range .Paginator.Pages.GroupByDate "2006年01月" }}
           <section class="section">
-            <h3 class="head">
+            <h2 class="head">
               <p class="yearmonth">{{ .Key }}</p>
-            </h3>
+            </h2>
 
             <ul class="list">
               {{ range .Pages }}
@@ -18,8 +18,8 @@
                     <img src="https://placehold.jp/700x300.png" alt="">
                   </figure>
                   <div class="info">
-                    <p class="date">{{ .Date.Format "02日" }}</p>
-                    <p class="title">{{ .Title }}</p>
+                    <p class="date">{{ .Date.Format "2日" }}</p>
+                    <h3 class="title">{{ .Title }}</h3>
                   </div>
                 </a></li>
               {{ end }}

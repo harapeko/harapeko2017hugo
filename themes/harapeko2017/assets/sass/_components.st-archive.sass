@@ -2,7 +2,7 @@
 .st-archive
   width: 100vw
   height: $content-height
-  padding: $margin
+  padding: $margin 0
   overflow-x: hidden
   overflow-y: scroll
 
@@ -14,19 +14,25 @@
       max-width: $desktop-right
 
   >.inner >.section
-    position: relative
     margin-bottom: 2 * $margin
     margin-top: $margin
+
+  >.inner >.section >.head
+    position: relative
+    display: flex
+    justify-content: center
+    width: calc(100% - ($margin * 2))
+    margin: 0 $margin $margin
     border-top: 2px solid $color-text
 
     &::before,
     &::after
       content: ""
       position: absolute
-      top: -1 * $margin
+      top: -1 * (1.6 * $margin) / 2
       display: inline-block
-      width: 2 * $margin
-      height: 2 * $margin
+      width: 1.6 * $margin
+      height: 1.6 * $margin
       background-color: $color-text
       border-radius: 100%
 
@@ -35,14 +41,8 @@
     &::after
       right: 0
 
-  >.inner >.section >.head
-    display: flex
-    justify-content: center
-    width: 100%
-    margin: 0 auto 1rem
-
     +tab
-      margin-bottom: 2rem
+      margin-bottom: ($margin * 2)
 
   >.inner >.section >.head >.yearmonth
     margin-top: 0
@@ -54,8 +54,8 @@
     border-style: none solid solid solid
 
     +tab
-      padding: 1rem
-      font-size: 2rem
+      padding: $margin
+      font-size: ($margin * 2)
 
 
 // SP(リスト部分 デザイン変わるので分ける)
@@ -80,7 +80,7 @@
     >.inner >.section >.list >.item >.media >.figure
       width: 36%
       margin: 0
-      padding-right: 1rem
+      padding-right: $margin
 
     >.inner >.section >.list >.item >.media >.info
       width: 64%
@@ -92,15 +92,16 @@
       margin-bottom: 0
 
     >.inner >.section >.list >.item >.media >.info >.date
-      margin-bottom: .5rem
-      color: $color-gray
-      font-size: 1rem
       line-height: 1
+      font-size: 1.2rem
+      color: $color-gray
+      font-size: $margin
 
     >.inner >.section >.list >.item >.media >.info >.title
-      word-break: break-all
       line-height: 1.4
-      font-size: 1.5rem
+      font-size: 1.6rem
+      font-weight: normal
+      word-break: break-all
 
 
 // PC、TAB(リスト部分 デザイン変わるので分ける)
@@ -115,7 +116,7 @@
 
     >.inner >.section >.list >.item
       width: 33.333%
-      margin-bottom: 2rem
+      margin-bottom: ($margin * 2)
       border-bottom: 1px solid $color-gray
 
     >.inner >.section >.list >.item >.media
@@ -124,8 +125,7 @@
       margin: 0
 
     >.inner >.section >.list >.item >.media >.info
-      padding-top: 1rem
-      padding-bottom: 1rem
+      padding: $margin
 
     >.inner >.section >.list >.item >.media >.info >.date,
     >.inner >.section >.list >.item >.media >.info >.title
@@ -133,10 +133,12 @@
       margin-bottom: 0
 
     >.inner >.section >.list >.item >.media >.info >.date
-      color: $color-gray
+      line-height: 1
       font-size: 1.2rem
+      color: $color-gray
 
     >.inner >.section >.list >.item >.media >.info >.title
-      font-size: 1.8rem
+      line-height: 1
+      font-size: 1.6rem
+      font-weight: normal
       word-break: break-all
-      line-height: 1.4
