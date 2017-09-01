@@ -4,23 +4,23 @@
     <ul class="list">
       {{ if ne $pages.First.PageNumber $pages.PageNumber }}
         <li class="item">
-          <a href="{{ $pages.First.URL }}">
-            <span>&laquo;</span>
+          <a class="link" href="{{ $pages.First.URL }}">
+            <span>最初</span>
           </a>
         </li>
       {{ end }}
 
       {{ if $pages.HasPrev }}
         <li class="item">
-          <a href="{{ $pages.Prev.URL }}">
-            <span>&lt;</span>
+          <a class="link" href="{{ $pages.Prev.URL }}">
+            <span>前へ</span>
           </a>
         </li>
       {{ end }}
 
       {{ range $pages.Pagers }}
-        <li class="item {{ if eq . $pages }}-current{{ end }}">
-          <a href="{{ .URL }}">
+        <li class="item">
+          <a class="link {{ if eq . $pages }}-current{{ end }}" href="{{ .URL }}">
             <span>{{ .PageNumber }}</span>
           </a>
         </li>
@@ -28,16 +28,16 @@
 
       {{ if $pages.HasNext }}
         <li class="item">
-          <a href="{{ $pages.Next.URL }}">
-            <span>&gt;</span>
+          <a class="link" href="{{ $pages.Next.URL }}">
+            <span>次へ</span>
           </a>
         </li>
       {{ end }}
 
       {{ if ne $pages.Last.PageNumber $pages.PageNumber }}
         <li class="item">
-          <a href="{{ $pages.Last.URL }}">
-            <span>&raquo;</span>
+          <a class="link" href="{{ $pages.Last.URL }}">
+            <span>最後</span>
           </a>
         </li>
       {{ end }}
