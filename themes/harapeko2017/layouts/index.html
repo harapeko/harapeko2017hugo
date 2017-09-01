@@ -6,6 +6,7 @@
       <section class="st-postslist">
         <h2 class="title"><a class="link" href="/categories/bycycle">自転車</a></h2>
         <ul class="list">
+            {{/*TODO データ取得をそれぞれのセクションに絞る*/}}
             {{ range .Paginator.Pages }}
               <li class="item"><a class="link" href="{{ .Permalink }}" title="{{ .Title }}">
                 <figure class="figure">
