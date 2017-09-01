@@ -1,6 +1,7 @@
 .st-footer
   width: 100vw
   height: 40px
+  font-size: 0
 
   +pc
     max-width: $desktop
@@ -16,5 +17,26 @@
     list-style: none
 
   >.list >.item
+    display: flex
+    align-items: center
+    justify-content: flex-end
     margin-right: $margin
     margin-bottom: 0
+
+  >.list >.item >.link
+    &:hover
+      border-style: none
+
+  >.list >.item >.link >.img
+    width: 3.4rem
+    height: 3rem
+
+  >.list >.item >.tweet
+    display: inline-flex
+    justify-content: center
+    align-items: flex-end
+    background-size: 50%
+    background-position-y: 0
+    font-size: 10px
+    color: $color-white
+    border-radius: 4px
