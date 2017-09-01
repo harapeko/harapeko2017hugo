@@ -14,8 +14,8 @@
               {{ range .Pages }}
                 <li class="item"><a class="media" href="{{ .Permalink }}">
                   <figure class="figure">
-                    {{/*TODO 後で差し替える<amp-img src="{{ .Params.eyecatch }}" width="700" height="300" alt="#TODO eyecatchのalt対応">*/}}
-                    <amp-img src="https://placehold.jp/700x300.png" width="700" height="300" alt=""></amp-img>
+                    {{/*TODO 後で差し替える<amp-img src="{{ .Params.eyecatch }}" width="700" height="300" alt="#TODO eyecatchのalt対応" layout="responsive"></amp-img>*/}}
+                    <amp-img src="https://placehold.jp/700x300.png" width="700" height="300" alt="" layout="responsive"></amp-img>
                   </figure>
                   <div class="info">
                     <p class="date">{{ .Date.Format "2日" }}</p>
