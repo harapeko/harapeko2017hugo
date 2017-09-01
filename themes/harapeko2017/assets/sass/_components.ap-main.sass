@@ -19,27 +19,41 @@
     font-size: 0
 
   >.block >.unit
-    display: flex
-    justify-content: flex-start
-    align-items: center
     margin-bottom: ($margin * 2)
 
-    +pc
+    +tab
+      display: flex
+      justify-content: flex-start
+      align-items: center
+
       &:nth-child(2)
         margin-bottom: 0
 
   >.block >.unit >.figure
     align-self: flex-start
-    margin: 0 ($margin * 2) 0 0
+    margin: 0 ($margin * 2) $margin 0
+    text-align: center
+
+    +tab
+      margin-right: $margin
+      padding-left: $margin
 
   >.block >.unit >.figure >.img
 
   >.block >.unit >.info
     align-self: flex-start
 
+    +sp
+      padding-right: $margin
+      padding-left: $margin
+
   >.block >.unit >.info >.name
     margin-top: 0
+    margin-bottom: $margin
     font-size: 2rem
 
   >.block >.unit >.info >.box
     font-size: 1.4rem
+
+    +tab
+      padding-right: $margin
