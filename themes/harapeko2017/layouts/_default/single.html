@@ -4,9 +4,9 @@
   <main class="right">
     <article class="st-single">
       <div class="inner">
-        {{ with .Params.eyecatch }}
+        {{ if ne .Params.eyecatch "" }}
           <figure class="eyecatch">
-            <amp-img class="img" src="{{ . }}" alt="TODO eyecatchのalt対応" width="700" height="300" layout="responsive"></amp-img>
+            <amp-img class="img" src="{{ .Params.eyecatch }}" alt="{{ .Params.eyecatch_alt }}" title="{{ .Params.eyecatch_alt }}" width="700" height="300" layout="responsive"></amp-img>
           </figure>
         {{ end }}
 

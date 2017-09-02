@@ -19,7 +19,7 @@ Params:
       src="{{ .Get "src" }}"
       width="{{ .Get "width" | default "640" }}"
       height="{{ .Get "height" | default "640" }}"
-      {{ if .Get "alt" }} alt="{{ .Get "alt" }}"{{ end }}
+      {{ if .Get "alt" }} alt="{{ .Get "alt" }}" title="{{ .Get "alt" }}"{{ end }}
       layout="responsive">
     </amp-img>
     {{ with .Get "caption" }}

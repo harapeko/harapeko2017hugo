@@ -2,6 +2,7 @@
 title: "Hello World"
 date: 2017-07-19T02:32:53+09:00
 eyecatch: "700x300.png"
+eyecatch_alt: "これはaltですよう"
 categories: "x"
 tags: ["a", "b"]
 draft: false
