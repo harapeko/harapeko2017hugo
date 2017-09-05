@@ -13,8 +13,11 @@ Params:
 */}}
 
 {{ $itemId := index .Params 0 }}
+{{$itemId}}
+{{/* 指定、中、大、小の優先順位で画像を表示します */}}
+{{/*
+  TODO amazon用のapiがないのでnetlifyのために一旦静的に表示させる
 {{ $json := getJSON "http://localhost:3000/?item=" $itemId }}
-
 <table>
   <tr>
     <th>status</th>
@@ -49,7 +52,6 @@ Params:
   <tr>
     <th>image_url</th>
     <td>
-      {{/* 指定、中、大、小の優先順位で画像を表示します */}}
       {{ if index .Params 1 }}
         <p>独自画像。{{ index .Params 1 }}</p>
       {{ else }}
@@ -64,11 +66,4 @@ Params:
     </td>
   </tr>
 </table>
-
-
-
-
-
-
-
-
+*/}}
