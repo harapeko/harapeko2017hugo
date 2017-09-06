@@ -1,52 +1,53 @@
-<amp-sidebar id="sidebar1" layout="nodisplay" side="right">
-  <ul>
-    <li>Nav item 1</li>
-    <li><a href="#idTwo" on="tap:idTwo.scrollTo">Nav item 2</a></li>
-    <li>Nav item 3</li>
-    <li><a href="#idFour" on="tap:idFour.scrollTo">Nav item 4</a></li>
-    <li>Nav item 5</li>
-    <li>Nav item 6</li>
-  </ul>
-</amp-sidebar>
-<button class="hamburger" on='tap:sidebar1.toggle'></button>
-<button on='tap:sidebar1'>Open</button>
-<button on='tap:sidebar1.open'>Open</button>
-<button on='tap:sidebar1.close'>x</button>
-
-{{/*
-<div class="st-sidebar">
-  <aside class="profile">
+<amp-sidebar class="st-sidebar" id="amp-sidebar" layout="nodisplay" side="right">
+  <h2 class="title">About</h2>
+  <h2 class="blogtitle"><a class="link" href="/">はらぺこ屋</a></h2>
+  <div class="profile">
     <figure class="figure">
       <amp-img class="img" src="/images/common/avatar/harapeko.jpg" width="180" height="180" alt="飼われてる人 はらぺこ" title="飼われてる人 はらぺこ"></amp-img>
-      <figcaption class="caption">飼われてる人 はらぺこ</figcaption>
     </figure>
+    <div class="info">
+      <h3 class="name">飼われてる人 はらぺこ</h3>
+      <div class="intro">
+        TODO テキスト考える<br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil itaque nostrum quos facere accusamus illo saepe ut, autem pariatur, quo nam aliquid. Consequuntur distinctio magnam deleniti dolorum nam aperiam mollitia.
+      </div>
+    </div>
+  </div><!--/.profile-->
+  <div class="profile">
     <figure class="figure">
         <amp-img class="img" src="/images/common/avatar/happy.jpg" width="180" height="180" alt="飼い主 はっぴー" title="飼い主 はっぴー"></amp-img>
-      <figcaption class="caption">飼い主 はっぴー</figcaption>
     </figure>
-  </aside>
+    <div class="info">
+      <h3 class="name">飼い主 はっぴー</h3>
+      <div class="intro">
+        TODO テキスト考える<br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil itaque nostrum quos facere accusamus illo saepe ut, autem pariatur, quo nam aliquid. Consequuntur distinctio magnam deleniti dolorum nam aperiam mollitia.
+      </div>
+    </div>
+  </div><!--/.profile-->
 
-  <aside class="ads">
-    <ul class="list">
-      <li class="item"><a class="link" href="http://amzn.to/2vxShho">
-        <figure class="figure">
-          <amp-img class="img" src="https://images-na.ssl-images-amazon.com/images/I/41V8HDTIenL.jpg" width="180" height="180"></amp-img>
-          <figcaption class="caption">キャティーマン (CattyMan) じゃれ猫 宙返り</figcaption>
-        </figure>
-      </a></li>
-      <li class="item"><a class="link" href="http://amzn.to/2vxShho">
-        <figure class="figure">
-          <amp-img class="img" src="https://images-na.ssl-images-amazon.com/images/I/41V8HDTIenL.jpg" width="180" height="180"></amp-img>
-          <figcaption class="caption">キャティーマン (CattyMan) じゃれ猫 宙返り</figcaption>
-        </figure>
-      </a></li>
-      <li class="item"><a class="link" href="http://amzn.to/2vxShho">
-        <figure class="figure">
-          <amp-img class="img" src="https://images-na.ssl-images-amazon.com/images/I/41V8HDTIenL.jpg" width="180" height="180"></amp-img>
-          <figcaption class="caption">キャティーマン (CattyMan) じゃれ猫 宙返り</figcaption>
-        </figure>
-      </a></li>
-    </ul>
-  </aside>
-</div><!--/.st-sidebar-->
-*/}}
+  <ul class="list">
+    <li class="item">
+      <a class="link" href="http://cycle.blogmura.com/ranking.html" target="_blank"><amp-img class="img" src="/images/components/st-footer/cycle.gif" width="46px" height="31px" alt="ブログ村(自転車)" title="他の人の自転車ブログを見る"></amp-img></a>
+    </li>
+    <li class="item">
+      <a class="link" href="http://cat.blogmura.com/ranking.html" target="_blank"><amp-img class="img" src="/images/components/st-footer/cat.gif" width="43px" height="31px" alt="ブログ村(猫)" title="他の人の猫ブログを見る"></amp-img></a>
+    </li>
+    <li class="item">
+      <a class="link" href="https://codepen.io/harapeko" target="_blank"><amp-img class="img" src="/images/components/st-footer/codepen.svg" width="3.4rem" height="3rem" alt="codepen" title="codepenへ"></amp-img></a>
+    </li>
+    <li class="item">
+      <a class="link" href="https://github.com/harapeko" target="_blank"><amp-img class="img" src="/images/components/st-footer/github.svg" width="3.4rem" height="3rem" alt="github" title="twitterへ"></amp-img></a>
+    </li>
+    <li class="item">
+      <a class="link" href="https://twitter.com/harapeko_wktk" target="_blank"><amp-img class="img" src="/images/components/st-footer/twitter.svg" width="3.4rem" height="3rem" alt="twitter" title="githubへ"></amp-img></a>
+    </li>
+    <li class="item">
+      <amp-social-share class="tweet" width="3.4rem" height="3rem" type="twitter">tweet</amp-social-share>
+    </li>
+  </ul>
+
+</amp-sidebar>
+<button class="sidebar-close" on='tap:amp-sidebar.close'>
+  <amp-img class="img" src="/images/components/st-sidebar/letter-x.svg" width="50" height="50"></amp-img>
+</button>

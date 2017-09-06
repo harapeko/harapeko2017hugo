@@ -1,41 +1,69 @@
 .st-sidebar
-  // +pc
-  //   // プロフィール領域
-  //   >.profile
-  //     margin-bottom: $margin * 1.5
+  width: 80vw
+  padding: $margin
 
-  //   >.profile >.figure
-  //     margin: 0
+  >.title
+    margin-top: 0
+    margin-bottom: $margin
 
-  //   >.profile >.figure >.img
-  //     display: block
-  //     margin-bottom: $margin / 2
+  // ブログタイトル
+  >.blogtitle
+    margin-top: 0
+    margin-bottom: ($margin * 2)
+    text-align: center
+    border-width: 2px
+    border-color: $color-text
+    border-top-style: solid
+    border-bottom-style: solid
 
-  //   >.profile >.figure >.caption
-  //     margin-bottom: $margin
-  //     font-size: 1.5rem
-  //     font-weight: bold
+  >.blogtitle >.link
+    display: block
+    color: $color-text
+    border-bottom: none
 
-  //   // 広告領域
-  //   >.ads
-  //   >.ads >.list
-  //     margin: 0
-  //     padding: 0
-  //     list-style: none
+  // プロフィール
+  >.profile
+    margin-bottom: $margin
 
-  //   >.ads >.list >.item
-  //     margin-bottom: $margin * 1.5
+    +pc
+      display: flex
 
-  //   >.ads >.list >.item >.link
-  //     border-style: none
+  // 画像
+  >.profile >.figure
+    margin: 0 0 ($margin / 2)
+    text-align: center
 
-  //   >.ads >.list >.item >.link >.figure
-  //     margin: 0
+    +pc
+      margin-right: $margin
 
-  //   >.ads >.list >.item >.link >.figure >.img
-  //     display: block
-  //     margin-bottom: $margin / 2
+  >.profile >.figure >.img
 
-  //   >.ads >.list >.item >.link >.figure >.caption
-  //     font-size: 1.2rem
-  //     line-height: 1.2
+  // 情報
+  >.profile >.info
+
+  // 名前
+  >.profile >.info >.name
+    margin-top: 0
+    margin-bottom: ($margin / 2)
+
+  // 紹介
+  >.profile >.info >.intro
+
+// 閉じるボタン
+.sidebar-close
+  position: fixed
+  right: $margin
+  bottom: $margin
+  padding: 0
+  background: none
+  border: none
+  color: $color-text
+  z-index: 2147483647
+
+  +pc
+    right: 50%
+    left: 50%
+
+.st-sidebar:not([open])+.sidebar-close
+  // なぜかtranslateXだとz-indexが負けるぽいぽい。謎
+  transform: translateY(100vw)
