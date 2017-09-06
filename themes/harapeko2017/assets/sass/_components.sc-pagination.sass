@@ -5,30 +5,30 @@
     justify-content: center
     flex-wrap: wrap
     margin-top: 0
-    margin-right: -1 * $margin
+    margin-right: -1 * ($margin / 2)
     margin-bottom: $margin
     list-style: none
 
   >.list >.item
-    margin-right: $margin
+    margin-right: ($margin / 2)
 
   >.list >.item >.link
     display: flex
     justify-content: center
     align-items: center
-    min-width: $margin * 4
-    min-height: $margin * 4
-    padding: ($margin / 2)
+    min-width: $margin * 2.5
+    min-height: $margin * 2.5
     line-height: 1
-    color: $color-text
-    border: 1px solid currentColor
+    color: $color-pagination
+    border: 2px solid currentColor
     font-size: 1.4rem
+    font-weight: bold
 
     &.-current
       pointer-events: none
-      background-color: $color-text
+      background-color: $color-pagination
       color: $color-white
 
     &:hover
-      background-color: $color-text
+      background-color: $color-pagination
       color: $color-white
