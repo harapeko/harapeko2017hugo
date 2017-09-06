@@ -1,32 +1,51 @@
 .st-header
-  display: flex
-  align-items: center
-  width: 100vw
-  height: 40px
+  >.nav
 
-  +pc
-    max-width: $desktop
+  >.nav >.list
+    display: flex
+    width: 100vw
+    margin-top: 0
+    margin-bottom: 0
+    padding-left: 0
+    list-style: none
 
-  // サイト名領域
-  >.sitename
+  >.nav >.list >.item
+    margin-bottom: 0
     flex: 1
 
-    >.title
-      margin: $margin
-      font-size: 1.6rem
+  >.nav >.list >.item >.link
+    display: block
+    padding-top: $margin * 2.5
+    padding-bottom: $margin / 2
+    color: $color-white
+    border-bottom-style: none
+    background-repeat: no-repeat
+    background-position: center 10px
 
-      +tab
-        font-size: 2rem
+    &.-home
+      background-color: $color-home
+      background-image: url('/images/components/st-header/home.svg')
+      background-size: 34px
 
-    >.title >.link
-      color: $color-text
+    &.-bike
+      background-color: $color-bike
+      background-image: url('/images/components/st-header/bicycle.svg')
+      background-size: 40px
 
-  // 検索領域
-  >.search
-    display: flex
-    align-items: flex-end
-    margin: $margin
+    &.-cat
+      background-color: $color-cat
+      background-image: url('/images/components/st-header/github.svg')
+      background-size: 34px
 
-  >.search >.form >.input,
-  >.search >.form >.submit
+    &.-notes
+      background-color: $color-notes
+      background-image: url('/images/components/st-header/checkbox-pen-outline.svg')
+      background-size: 30px
+
+  >.nav >.list >.item >.link >.title
+    margin-top: 0
     margin-bottom: 0
+    font-size: 1.4rem
+    text-align: center
+    font-weight: normal
+    line-height: 1

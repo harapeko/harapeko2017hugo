@@ -1,3 +1,19 @@
+<amp-sidebar id="sidebar1" layout="nodisplay" side="right">
+  <ul>
+    <li>Nav item 1</li>
+    <li><a href="#idTwo" on="tap:idTwo.scrollTo">Nav item 2</a></li>
+    <li>Nav item 3</li>
+    <li><a href="#idFour" on="tap:idFour.scrollTo">Nav item 4</a></li>
+    <li>Nav item 5</li>
+    <li>Nav item 6</li>
+  </ul>
+</amp-sidebar>
+<button class="hamburger" on='tap:sidebar1.toggle'></button>
+<button on='tap:sidebar1'>Open</button>
+<button on='tap:sidebar1.open'>Open</button>
+<button on='tap:sidebar1.close'>x</button>
+
+{{/*
 <div class="st-sidebar">
   <aside class="profile">
     <figure class="figure">
@@ -33,3 +49,4 @@
     </ul>
   </aside>
 </div><!--/.st-sidebar-->
+*/}}

@@ -4,7 +4,7 @@
   <main class="right" id="anc-right">
     <div class="column">
       <section class="st-postslist">
-        <h2 class="title"><a class="link" href="/categories/bike">自転車</a></h2>
+
         <ul class="list">
           {{ range where .Data.Pages "Section" "bike" }}
             {{ .Render "_top_li" }}
@@ -14,7 +14,7 @@
     </div>
     <div class="column">
       <section class="st-postslist">
-        <h2 class="title"><a class="link" href="/categories/cat">猫</a></h2>
+
         <ul class="list">
           {{ range where .Data.Pages "Section" "cat" }}
             {{ .Render "_top_li" }}
@@ -24,7 +24,7 @@
     </div>
     <div class="column">
       <section class="st-postslist">
-        <h2 class="title"><a class="link" href="/categories/notes">雑記</a></h2>
+
         <ul class="list">
           {{ range where .Data.Pages "Section" "notes" }}
             {{ .Render "_top_li" }}
@@ -33,9 +33,7 @@
       </section><!--/.st-postslist-->
     </div>
   </main>
-  <div class="left">
-    {{ partial "sidebar.html" . }}
-  </div>
 </div><!--/.st-wrapper-->
 
+{{ partial "sidebar.html" . }}
 {{ partial "footer.html" . }}
