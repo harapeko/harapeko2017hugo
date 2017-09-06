@@ -1,50 +1,9 @@
 .st-wrapper
-  display: flex
   width: 100vw
-  // TODo
-  // -80px = - 40px - 40px
-  // height: calc(100vh - 80px)
-  border-top: 1px solid $color-gray
-  border-bottom: 1px solid $color-gray
-  // overflow-y: scroll
+  margin-bottom: $margin
 
-  +tab
-    overflow: visible
-
-  >.left
-    display: none
-
+  >.main
     +pc
-      order: 0
-      display: block
-      flex: none
-      width: 200px
-      padding: $margin
-      border-right: 1px solid $color-gray
-      // overflow-y: scroll
-
-  >.right
-    display: block
-    flex: 1
-
-    +tab
-      display: flex
-
-    +pc
-      order: 1
-
-  >.right >.column
-    flex: 1
-
-    +pc
-      max-width: 300px
-
-  >.right >.onecolumn
-    width: 100%
-    // TODO
-    // 82 = 80 + 1 + 1
-    // height: $content-height
-    // overflow-y: scroll
-
-    +pc
-      max-width: $desktop-right
+      max-width: $desktop
+      margin-right: auto
+      margin-left: auto

@@ -1,9 +1,9 @@
 <li class="item"><a class="link" href="{{ .Permalink }}" title="{{ .Title }}">
   <figure class="figure">
-    <amp-img class="img" src="{{ .Params.eyecatch }}" alt="{{ .Params.eyecatch_alt }}" title="{{ .Params.eyecatch_alt }}" width="300" height="130" layout="responsive"></amp-img>
+    <amp-img class="img" src="{{ .Params.eyecatch }}" alt="{{ .Params.eyecatch_alt }}" title="{{ .Params.eyecatch_alt }}" width="700" height="300" layout="responsive"></amp-img>
   </figure>
   <div class="info">
+      <h3 class="title">{{ .Title }}</h3>
     <p class="date">{{ .Date.Format "2006年1月2日" }}</p>
-    <h3 class="title">{{ .Title }}</h3>
   </div>
 </a></li>

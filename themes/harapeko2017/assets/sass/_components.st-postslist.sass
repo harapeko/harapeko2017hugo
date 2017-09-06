@@ -1,120 +1,75 @@
 .st-postslist
-  // タイトル
-  >.title
-    height: 40px
-    margin-top: 0
-    margin-bottom: 0
-    padding: $margin
-    font-size: 2rem
-    text-align: right
+  display: flex
+  flex-wrap: wrap
+  margin-top: 0
+  padding-left: 0
+  list-style: none
+  font-size: 0
 
-    +tab
-      text-align: left
-
-  >.title >.link
-
-
-  >.list
-    margin-top: 0
-    padding-left: 0
-    list-style: none
-    font-size: 0
-    overflow-y: scroll
-
-    +tab
-      // 142px = 40 + 40 + 40 + 2
-      // TODO
-      // height: calc(100vh - 122px)
-
-  >.list >.item
+  >.item
+    flex: 50%
+    max-width: 50%
     margin-bottom: 0
 
-    &:nth-child(n+5)
-      display: none
+    +pc
+      flex: 33.33333%
+      max-width: 33.33333%
 
-    +tab
-      &:nth-child(n+5)
-        display: block
-
-  >.list >.item >.link
-    display: flex
+  >.item >.link
+    display: block
 
     &:hover
-      border-style: none
+      border-bottom-style: none
 
-    +tab
-      display: block
-
-  >.list >.item >.link >.figure
-    width: 36%
+  >.item >.link >.figure
     position: relative
     margin: 0
     overflow: hidden
 
-    &:before
-      z-index: 2
-      position: absolute
-      top: 0
-      display: block
-      content: ""
-      width: 100%
-      height: 100%
-
+    &:before,
     &::after
       z-index: 2
-      content: ''
-      display: block
+      content: ""
       position: absolute
       top: 0
       left: 0
+      display: block
       width: 100%
       height: 100%
 
-    +tab
-      width: 100%
-
-  >.list >.item >.link:hover >.figure::before
+  >.item >.link:hover >.figure::before
     transform: scale(.95, .9)
     border: 1px solid rgba(255, 255, 255, .7)
     transition: transform .15s ease-out
 
-  >.list >.item >.link:hover >.figure::after
+  >.item >.link:hover >.figure::after
     background: radial-gradient(circle, transparent 70%, #222 150%)
     mix-blend-mode: multiply
 
-  >.list >.item >.link >.figure >.img
+  >.item >.link >.figure >.img
     transition: transform .2s ease-out
     z-index: 1
 
-  >.list >.item >.link:hover >.figure >.img
+  >.item >.link:hover >.figure >.img
     transform: scale(1.1)
 
-  >.list >.item >.link >.info
-    width: 64%
+  >.item >.link >.info
     padding: $margin / 2
     background-color: $color-white
 
-    +tab
-      width: 100%
-      padding: $margin
-
-  >.list >.item >.link >.info >.date,
-  >.list >.item >.link >.info >.title
+  >.item >.link >.info >.date,
+  >.item >.link >.info >.title
     margin-top: 0
     margin-bottom: 0
 
-  >.list >.item >.link >.info >.date
-    margin-bottom: .5rem
+  >.item >.link >.info >.date
+    height: 1.2rem
     line-height: 1
     font-size: 1.2rem
     color: $color-gray
 
-    +pc
-      margin-bottom: .5rem
-
-  >.list >.item >.link >.info >.title
-    min-height: 3em
-    line-height: 1
+  >.item >.link >.info >.title
+    margin-bottom: $margin / 2
+    line-height: 1.2
     font-size: 1.6rem
     font-weight: normal
-    overflow: hidden

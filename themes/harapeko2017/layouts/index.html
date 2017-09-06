@@ -1,39 +1,15 @@
 {{ partial "header.html" . }}
 
 <div class="st-wrapper">
-  <main class="right" id="anc-right">
-    <div class="column">
-      <section class="st-postslist">
-
-        <ul class="list">
-          {{ range where .Data.Pages "Section" "bike" }}
-            {{ .Render "_top_li" }}
-          {{ end }}
-        </ul>
-      </section><!--/.st-postslist-->
-    </div>
-    <div class="column">
-      <section class="st-postslist">
-
-        <ul class="list">
-          {{ range where .Data.Pages "Section" "cat" }}
-            {{ .Render "_top_li" }}
-          {{ end }}
-        </ul>
-      </section><!--/.st-postslist-->
-    </div>
-    <div class="column">
-      <section class="st-postslist">
-
-        <ul class="list">
-          {{ range where .Data.Pages "Section" "notes" }}
-            {{ .Render "_top_li" }}
-          {{ end }}
-        </ul>
-      </section><!--/.st-postslist-->
-    </div>
+  <main class="main">
+    <ul class="st-postslist">
+      {{ range .Paginator.Pages }}
+        {{ .Render "_top_li" }}
+      {{ end }}
+    </ul>
   </main>
 </div><!--/.st-wrapper-->
 
+{{ partial "pagination.html" . }}
 {{ partial "sidebar.html" . }}
 {{ partial "footer.html" . }}
