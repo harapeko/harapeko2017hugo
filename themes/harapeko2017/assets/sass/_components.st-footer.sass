@@ -1,13 +1,21 @@
 .st-footer
-  width: 100vw
-  height: 40px
-  font-size: 0
+  padding-top: 40px
 
-  +pc
-    max-width: $desktop
+  >.nav
+    position: fixed
+    bottom: 0
+    z-index: $zi-l
+    width: 100vw
+    height: 40px
+    font-size: 0
+
+    +pc
+      max-width: $desktop
+      margin-right: auto
+      margin-left: auto
 
   // フッターリスト
-  >.list
+  >.nav >.list
     display: flex
     align-items: center
     justify-content: flex-end
@@ -16,27 +24,27 @@
     padding: 0
     list-style: none
 
-  >.list >.item
+  >.nav >.list >.item
     display: flex
     align-items: center
     justify-content: flex-end
     margin-right: ($margin / 3 * 2)
     margin-bottom: 0
 
-  >.list >.item >.link
+  >.nav >.list >.item >.link
     color: $color-text
     &:hover
       color: #982c61
       border-style: none
 
-  >.list >.item >.link >.text
+  >.nav >.list >.item >.link >.text
     font-size: 1.6rem
 
-  >.list >.item >.link >.img
+  >.nav >.list >.item >.link >.img
     width: 3.4rem
     height: 3rem
 
-  >.list >.item >.tweet
+  >.nav >.list >.item >.tweet
     display: inline-flex
     justify-content: center
     align-items: flex-end
