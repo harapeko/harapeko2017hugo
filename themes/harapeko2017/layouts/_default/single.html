@@ -39,13 +39,13 @@
           {{ if .PrevInSection }}
             <div class="unit">
               <p class="title"><span class="span">Prev Post</span></p>
-              <a class="link" href="{{ .PrevInSection.RelPermalink }}"><i class=""></i>{{ .PrevInSection.Title }}</a>
+              <a class="link" href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a>
             </div>
           {{ end }}
           {{ if .NextInSection }}
             <div class="unit">
               <p class="title"><span class="span">Next Post</span></p>
-              <a class="link" href="{{ .NextInSection.RelPermalink }}"><i class=""></i>{{ .NextInSection.Title }}</a>
+              <a class="link" href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a>
             </div>
           {{ end }}
         </div>

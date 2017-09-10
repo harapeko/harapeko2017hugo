@@ -1,143 +1,34 @@
-// 共通(年月部分)
 .st-archive
-  width: 100vw
-  padding: $margin 0
-  overflow-x: hidden
-
-
-  +pc
-    width: 100%
 
   >.inner
+    padding-top: $margin
 
   >.inner >.section
-    margin-bottom: 2 * $margin
-    margin-top: $margin
 
+  // 年月
   >.inner >.section >.head
-    position: relative
-    display: flex
-    justify-content: center
-    width: calc(100% - ($margin * 2))
-    margin: 0 $margin $margin
-    border-top: 2px solid $color-text
-
-    &::before,
-    &::after
-      content: ""
-      position: absolute
-      top: -1 * (1.6 * $margin) / 2
-      display: inline-block
-      width: 1.6 * $margin
-      height: 1.6 * $margin
-      background-color: $color-text
-      border-radius: 100%
-
-    &::before
-      left: 0
-    &::after
-      right: 0
-
-    +tab
-      margin-bottom: ($margin * 2)
+    margin-top: 0
+    margin-bottom: $margin
+    font-size: 0
 
   >.inner >.section >.head >.yearmonth
+    position: relative
     margin-top: 0
-    margin-bottom: 0
-    padding: .5rem
-    font-size: .5rem
-    border-color: $color-text
-    border-width: 2px
-    border-style: none solid solid solid
+    font-weight: bold
 
-    +tab
-      padding: $margin
-      font-size: ($margin * 2)
-
-
-// SP(リスト部分 デザイン変わるので分ける)
-+sp
-  .st-archive
-    >.inner >.section >.list
-      padding-left: 0
-      border-top: 1px solid $color-gray
-      list-style: none
-      font-size: 0
-
-    >.inner >.section >.list >.item
-      margin-bottom: 0
-      padding-top: .5rem
-      padding-bottom: .5rem
-      border-bottom: 1px solid $color-gray
-
-    >.inner >.section >.list >.item >.media
-      display: flex
-      border-bottom-style: none
-
-    >.inner >.section >.list >.item >.media >.figure
-      width: 36%
-      margin: 0
-      padding-right: $margin
-
-    >.inner >.section >.list >.item >.media >.info
-      width: 64%
-
-    >.inner >.section >.list >.item >.media >.info >.date,
-    >.inner >.section >.list >.item >.media >.info >.title
+    &::before
+      position: absolute
+      top: 50%
+      z-index: 1
+      content: ''
       display: block
-      margin-top: 0
-      margin-bottom: 0
+      width: 100%
+      height: 1px
+      background-color: $color-gray
 
-    >.inner >.section >.list >.item >.media >.info >.date
-      line-height: 1
-      font-size: 1.2rem
-      color: $color-gray
-      font-size: $margin
-
-    >.inner >.section >.list >.item >.media >.info >.title
-      line-height: 1.4
-      font-size: 1.6rem
-      font-weight: normal
-      word-break: break-all
-
-
-// PC、TAB(リスト部分 デザイン変わるので分ける)
-+tab
-  .st-archive
-    >.inner >.section >.list
-      display: flex
-      flex-wrap: wrap
-      padding: 0
-      list-style-type: none
-      font-size: 0
-
-    >.inner >.section >.list >.item
-      width: 33.333%
-      margin-bottom: ($margin * 2)
-      border-bottom: 1px solid $color-gray
-
-    >.inner >.section >.list >.item >.media
-
-    >.inner >.section >.list >.item >.media >.figure
-      margin: 0
-
-    >.inner >.section >.list >.item >.media >.info
-      padding: $margin
-
-    >.inner >.section >.list >.item >.media >.info >.date,
-    >.inner >.section >.list >.item >.media >.info >.title
-      margin-top: 0
-      margin-bottom: 0
-
-    >.inner >.section >.list >.item >.media >.info >.date
-      margin-bottom: .5rem
-      line-height: 1
-      font-size: 1.2rem
-      color: $color-gray
-
-    >.inner >.section >.list >.item >.media >.info >.title
-      min-height: 2em
-      line-height: 1
-      font-size: 1.6rem
-      font-weight: normal
-      word-break: break-all
+  >.inner >.section >.head >.yearmonth >.span
+    position: relative
+    padding-right: 1em
+    background-color: $color-white
+    font-size: 2rem
+    z-index: $zi-s

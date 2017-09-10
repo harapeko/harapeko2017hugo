@@ -1,7 +1,8 @@
-.st-postslist
+.sc-postslist
   display: flex
   flex-wrap: wrap
   margin-top: 0
+  margin-bottom: $margin
   padding-left: 0
   list-style: none
   font-size: 0
@@ -9,7 +10,6 @@
   >.item
     flex: 50%
     max-width: 50%
-    margin-bottom: 0
 
     +pc
       flex: 33.33333%
@@ -54,7 +54,7 @@
     transform: scale(1.1)
 
   >.item >.link >.info
-    padding: ($margin / 2) ($margin / 2) ($margin * 2 / 3)
+    padding: $margin ($margin / 2)
     background-color: $color-white
 
   >.item >.link >.info >.title
@@ -63,3 +63,4 @@
     line-height: 1.2
     font-size: 1.6rem
     font-weight: normal
+    word-break: break-all

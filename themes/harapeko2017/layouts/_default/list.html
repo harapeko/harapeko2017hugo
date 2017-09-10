@@ -8,17 +8,16 @@
         {{ range .Paginator.Pages.GroupByDate "2006年01月" }}
           <section class="section">
             <h2 class="head">
-              <p class="yearmonth">{{ .Key }}</p>
+              <p class="yearmonth"><span class="span">{{ .Key }}</span></p>
             </h2>
 
-            <ul class="list">
+            <ul class="sc-postslist">
               {{ range .Pages }}
-                <li class="item"><a class="media" href="{{ .Permalink }}">
+                <li class="item"><a class="link" href="{{ .Permalink }}">
                   <figure class="figure">
                     <amp-img src="{{ .Params.eyecatch }}" width="700" height="300" alt="{{ .Params.eyecatch }}" title="{{ .Params.eyecatch }}" layout="responsive"></amp-img>
                   </figure>
                   <div class="info">
-                    <p class="date">{{ .Date.Format "2日" }}</p>
                     <h3 class="title">{{ .Title }}</h3>
                   </div>
                 </a></li>
