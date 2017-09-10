@@ -12,19 +12,27 @@
     list-style: none
 
   >.list >.item
-    margin-right: ($margin / 2)
+    +sp
+      &:not(:nth-child(6n))
+        margin-right: 2vw
+    +tab
+      margin-right: ($margin / 2)
 
   >.list >.item >.link
     display: flex
     justify-content: center
     align-items: center
-    min-width: $margin * 2.5
-    min-height: $margin * 2.5
+    min-width: 15vw
+    min-height: 15vw
     line-height: 1
     color: $color-pagination
-    border: 2px solid currentColor
+    border: 2px solid $color-pagination
     font-size: 1.4rem
     font-weight: bold
+
+    +tab
+      min-width: 50px
+      min-height: 50px
 
     &.-current
       pointer-events: none
