@@ -11,7 +11,6 @@
     position: fixed
     width: 100vw
     height: 50px
-    overflow: hidden
     bottom: 0
     z-index: $zi-l
 
@@ -22,8 +21,12 @@
     width: 100px
     height: 100px
     border-radius: 100%
+    transition: opacity .2s, transform .2s
 
-    &:hover
+    &:hover,
+    &:active
+      opacity: .9
+      transform: scale(1.6)
       filter: brightness(110%)
 
   >.inner >.about
