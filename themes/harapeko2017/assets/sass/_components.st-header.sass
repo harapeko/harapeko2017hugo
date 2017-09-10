@@ -6,6 +6,7 @@
 
   >.nav
     position: fixed
+    box-shadow: 0px 1px 6px rgba(0,0,0,0.2)
     z-index: $zi-l
 
   >.nav >.list
@@ -28,6 +29,9 @@
     border-bottom-style: none
     background-repeat: no-repeat
     background-position: center ($margin / 3)
+
+    &:hover
+      filter: brightness(110%)
 
     +tab
       padding-top: $margin * 2
