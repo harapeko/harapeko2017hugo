@@ -29,9 +29,15 @@
     border-bottom-style: none
     background-repeat: no-repeat
     background-position: center ($margin / 3)
+    transition: transform .2s, opacity .2s
 
     &:hover
+      transform: scale(1.1)
       filter: brightness(110%)
+
+    &:active
+      transform: scale(2)
+      opacity: .2
 
     +tab
       padding-top: $margin * 2
