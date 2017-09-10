@@ -4,7 +4,14 @@
   <main class="main">
     <ul class="st-postslist">
       {{ range .Paginator.Pages }}
-        {{ .Render "_top_li" }}
+        <li class="item"><a class="link" href="{{ .Permalink }}" title="{{ .Title }}">
+          <figure class="figure">
+            <amp-img class="img" src="{{ .Params.eyecatch }}" alt="{{ .Params.eyecatch_alt }}" title="{{ .Params.eyecatch_alt }}" width="700" height="300" layout="responsive"></amp-img>
+          </figure>
+          <div class="info">
+              <h3 class="title">{{ .Title }}</h3>
+          </div>
+        </a></li>
       {{ end }}
     </ul>
   </main>
