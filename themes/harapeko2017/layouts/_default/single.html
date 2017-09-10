@@ -34,7 +34,27 @@
           <h1 class="posttile">{{ .Title }}</h1>
         </div><!--/.postheader-->
 
-        <div class="post-content">{{ .Content }}</div>
+        <div class="st-postcontent">{{ .Content }}</div>
+
+        <div class="prevnext">
+          {{ if .PrevInSection }}
+            <div class="unit">
+              <p class="title"><span class="span">Prev Post</span></p>
+              <a class="link" href="{{ .PrevInSection.RelPermalink }}"><i class=""></i>{{ .PrevInSection.Title }}</a>
+            </div>
+          {{ end }}
+          {{ if .NextInSection }}
+            <div class="unit">
+              <p class="title"><span class="span">Next Post</span></p>
+              <a class="link" href="{{ .NextInSection.RelPermalink }}"><i class=""></i>{{ .NextInSection.Title }}</a>
+            </div>
+          {{ end }}
+        </div>
+
+        <div class="totop">
+          <a href="/" title="トップに戻る"><amp-img src="/images/components/st-single/letter-x.svg" width="80px" height="80px"></amp-img></a>
+        </div>
+
       </div>
     </article><!--/.st-single-->
   </main>
