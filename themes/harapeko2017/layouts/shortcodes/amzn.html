@@ -13,11 +13,7 @@ Params:
 */}}
 
 {{ $itemId := index .Params 0 }}
-{{$itemId}}
-{{/* 指定、中、大、小の優先順位で画像を表示します */}}
-{{/*
-  TODO amazon用のapiがないのでnetlifyのために一旦静的に表示させる
-{{ $json := getJSON "http://localhost:3000/?item=" $itemId }}
+{{ $json := getJSON "https://harapeko-ap.herokuapp.com/?item=" $itemId }}
 <table>
   <tr>
     <th>status</th>
@@ -55,6 +51,7 @@ Params:
       {{ if index .Params 1 }}
         <p>独自画像。{{ index .Params 1 }}</p>
       {{ else }}
+        {{/* 指定、中、大、小の優先順位で画像を表示します */}}
         {{ if ne $json.images.medium "" }}
           <p>{{ $json.images.medium }}</p>
         {{ else if ne $json.images.large "" }}
@@ -66,4 +63,3 @@ Params:
     </td>
   </tr>
 </table>
-*/}}
