@@ -25,7 +25,7 @@ https://machinist-switch-72660.netlify.com/
 
 ### blank指定あり
 ```html
-{{< img class="class-something" src="https://placehold.jp/300x300.png" width="300" height="300" alt="画像自体の説明" caption="画像に添える説明" link="http://google.co.jp" target="_blank" >}}
+{{< img class="class-something" src="https://placehold.jp/300x300.png" width="300" height="300" alt="画像自体の説明" caption="画像に添える説明" link="http://google.co.jp" target="_blank" rel="noopener" >}}
 ```
 
 ※src, width, heightは必須

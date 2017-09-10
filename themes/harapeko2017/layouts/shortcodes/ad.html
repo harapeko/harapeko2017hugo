@@ -9,7 +9,7 @@
     width*:  string  横幅      必須
     height*: string  高さ      必須
 */}}
-<a href="{{ .Get "link" }}" target="_blank">
+<a href="{{ .Get "link" }}" target="_blank" rel="noopener">
   <figure>
     <amp-img src="{{ .Get "src" }}" width="{{ .Get "width" }}" height="{{ .Get "height" }}" alt="{{ .Get "title" }}" layout="responsive"></amp-img>
     <figcaption>{{ .Get "title" }}</figcaption>
