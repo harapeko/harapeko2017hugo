@@ -4,13 +4,13 @@
     display: flex
     align-items: center
     justify-content: center
-    height: 40px
+    height: 50px
     font-weight: bold
 
   >.inner
     position: fixed
     width: 100vw
-    height: 40px
+    height: 50px
     overflow: hidden
     bottom: 0
     z-index: $zi-l
@@ -18,23 +18,23 @@
   >.inner >.about,
   >.inner >.share
     position: absolute
-    bottom: -40px
-    width: 80px
-    height: 80px
+    bottom: -50px
+    width: 100px
+    height: 100px
     border-radius: 100%
 
     &:hover
       filter: brightness(110%)
 
   >.inner >.about
-    left: -40px
+    left: -50px
 
   >.inner >.about >.icon
-    width: 80px
-    height: 80px
+    width: 100px
+    height: 100px
     border-radius: 100%
-    background-size: 24px
-    background-position: 44px 12px
+    background-size: 30px
+    background-position: 54px 14px
     box-shadow: 1px 1px 4px rgba(0,0,0,0.2)
     background-image: url('/images/components/st-footer/smile.svg')
     background-repeat: no-repeat
@@ -42,10 +42,10 @@
     border: none
 
   >.inner >.share
-    right: -40px
+    right: -50px
 
   >.inner >.share >.icon
     border-radius: 100%
-    background-size: 26px
-    background-position: 12px 12px
+    background-size: 36px
+    background-position: 14px 14px
     box-shadow: -1px -1px 4px rgba(0,0,0,0.2)
