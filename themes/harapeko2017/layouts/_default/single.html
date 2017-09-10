@@ -1,15 +1,14 @@
-{{ partial "header.html" . }}
+{{ partial "head.html" . }}
 
 <div class="st-wrapper">
   <main class="main">
     <article class="st-single">
+      {{ if ne .Params.eyecatch "" }}
+        <figure class="eyecatch">
+          <amp-img class="img" src="{{ .Params.eyecatch }}" alt="{{ .Params.eyecatch_alt }}" title="{{ .Params.eyecatch_alt }}" width="700" height="300" layout="responsive"></amp-img>
+        </figure>
+      {{ end }}
       <div class="inner">
-        {{ if ne .Params.eyecatch "" }}
-          <figure class="eyecatch">
-            <amp-img class="img" src="{{ .Params.eyecatch }}" alt="{{ .Params.eyecatch_alt }}" title="{{ .Params.eyecatch_alt }}" width="700" height="300" layout="responsive"></amp-img>
-          </figure>
-        {{ end }}
-
         <div class="postheader">
           <div class="postdate">
             <time class="time">{{ .Date.Format "2006/1/2" }}</time>

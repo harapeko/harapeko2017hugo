@@ -1,19 +1,18 @@
 .st-single
   width: 100vw
-  padding: $margin
 
   +pc
     width: 100%
 
-  >.inner
-    max-width: $desktop-right
-
   // アイキャッチ
-  >.inner >.eyecatch
+  >.eyecatch
     max-width: 700px
-    margin: 0 auto ($margin * 2)
+    margin: 0 auto $margin
 
-  >.inner >.eyecatch >.img
+  >.eyecatch >.img
+
+  >.inner
+    padding: 0 $margin $margin
 
   >.inner >.postheader
     text-align: center
