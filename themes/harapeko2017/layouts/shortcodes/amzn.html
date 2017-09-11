@@ -12,8 +12,9 @@ Params:
   参考：https://github.com/harapeko/amazon_pa_api_by_php
 */}}
 
+{{ $api := getenv "AMAZON_PRODUCT_API" }}
 {{ $itemId := index .Params 0 }}
-{{ $json := getJSON "https://harapeko-ap.herokuapp.com/?item=" $itemId }}
+{{ $json := getJSON $api $itemId }}
 <table>
   <tr>
     <th>status</th>
