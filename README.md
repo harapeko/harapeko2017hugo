@@ -18,16 +18,6 @@ https://machinist-switch-72660.netlify.com/
 {{< img class="class-something" src="https://placehold.jp/300x300.png" width="300" height="300" alt="画像自体の説明" caption="画像に添える説明" >}}
 ```
 
-### リンクあり
-```html
-{{< img class="class-something" src="https://placehold.jp/300x300.png" width="300" height="300" alt="画像自体の説明" caption="画像に添える説明" link="http://google.co.jp" >}}
-```
-
-### blank指定あり
-```html
-{{< img class="class-something" src="https://placehold.jp/300x300.png" width="300" height="300" alt="画像自体の説明" caption="画像に添える説明" link="http://google.co.jp" target="_blank" rel="noopener" >}}
-```
-
 ※src, width, heightは必須
 
 ## amp-twitter

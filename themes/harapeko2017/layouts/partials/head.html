@@ -26,11 +26,6 @@
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 </head>
 <body class="st-body">
-<amp-install-serviceworker
-  src="/serviceworker.js"
-  data-iframe-src="/install-serviceworker.html"
-  layout="nodisplay">
-</amp-install-serviceworker>
 {{ if ne .Site.Params.googleanalytics "" }}
 <amp-analytics type="googleanalytics" id="analytics">
   <script type="application/json">
