@@ -8,31 +8,32 @@
           <amp-img class="img" src="{{ .Params.eyecatch }}" alt="{{ .Params.eyecatch_alt }}" title="{{ .Params.eyecatch_alt }}" width="700" height="300" layout="responsive"></amp-img>
         </figure>
       {{ end }}
-      <div class="inner">
-        <div class="postheader">
-          <div class="postdate">
-            <time class="time">{{ .Date.Format "2006/1/2" }}</time>
-          </div>
 
-          <div class="taxonomy">
-            <div class="categories">カテゴリ：
-              {{ with .Params.categories }}
-                <a class="link" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-              {{ end }}
-            </div>
+      <div class="postheader">
+        <div class="postdate">
+          <time class="time">{{ .Date.Format "2006/1/2" }}</time>
+        </div>
 
-            {{ with .Params.tags }}
-              <div class="tags">タグ：
-                {{ range . }}
-                  <a class="link" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-                {{ end }}
-              </div>
+        <div class="taxonomy">
+          <div class="categories">カテゴリ：
+            {{ with .Params.categories }}
+              <a class="link" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
             {{ end }}
           </div>
 
-          <h1 class="posttile">{{ .Title }}</h1>
-        </div><!--/.postheader-->
+          {{ with .Params.tags }}
+            <div class="tags">タグ：
+              {{ range . }}
+                <a class="link" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
 
+        <h1 class="posttile">{{ .Title }}</h1>
+      </div><!--/.postheader-->
+
+      <div class="inner">
         <div class="st-postcontent">{{ .Content }}</div>
 
         <div class="prevnext">

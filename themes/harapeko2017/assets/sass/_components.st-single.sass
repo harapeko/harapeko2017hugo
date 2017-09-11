@@ -22,18 +22,17 @@
   // アイキャッチ
   >.eyecatch
     max-width: 700px
-    margin: 0 auto $margin
+    margin: 0 auto
 
   >.eyecatch >.img
 
-  >.inner
-    padding: 0 $margin $margin
-
-  >.inner >.postheader
+  >.postheader
+    padding: $margin
+    background-color: #e0e0e0
     text-align: center
 
   // 記事タイトル
-  >.inner >.postheader >.posttile
+  >.postheader >.posttile
     position: relative
     display: inline-block
     margin: 0 ($margin / 2) ($margin / 2)
@@ -64,7 +63,7 @@
       border-bottom-style: solid
 
   // 記事日付
-  >.inner >.postheader >.postdate
+  >.postheader >.postdate
     display: flex
     justify-content: center
     align-items: center
@@ -77,26 +76,34 @@
       background-image: url('/images/components/st-postcontents/calendar.png')
       background-repeat: no-repeat
 
-  >.inner >.postheader >.postdate >.time
+  >.postheader >.postdate >.time
     text-align: center
     font-size: 1.4rem
     color: currentColor
 
-  >.inner >.postheader >.taxonomy
+  >.postheader >.taxonomy
     display: flex
     justify-content: center
     margin-bottom: $margin
     font-size: 1.6rem
 
-  >.inner >.postheader >.taxonomy >.categories,
-  >.inner >.postheader >.taxonomy >.tags
+  >.postheader >.taxonomy >.categories,
+  >.postheader >.taxonomy >.tags
     margin-right: 2rem
 
-  >.inner >.postheader >.taxonomy >.categories >.link,
-  >.inner >.postheader >.taxonomy >.tags >.link
+  >.postheader >.taxonomy >.categories >.link,
+  >.postheader >.taxonomy >.tags >.link
     &:not(:last-child)::after
       content: ","
       margin-right: .5rem
+
+  >.inner
+    padding: 0 $margin $margin
+
+    +pc
+      max-width: $desktop
+      margin-right: auto
+      margin-left: auto
 
   >.inner >.prevnext
     margin-bottom: $margin
