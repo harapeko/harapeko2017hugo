@@ -2,7 +2,7 @@
 
 <div class="st-wrapper">
   <main class="main">
-    <article class="st-single">
+    <article class="st-single{{ with .Params.categories }} -{{ . }}{{ end }}">
       {{ if ne .Params.eyecatch "" }}
         <figure class="eyecatch">
           <amp-img class="img" src="{{ .Params.eyecatch }}" alt="{{ .Params.eyecatch_alt }}" title="{{ .Params.eyecatch_alt }}" width="700" height="300" layout="responsive"></amp-img>

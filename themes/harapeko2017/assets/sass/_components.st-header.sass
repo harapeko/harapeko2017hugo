@@ -1,13 +1,25 @@
 .st-header
-  padding-bottom: 46px
+  padding-bottom: 52px
 
   +tab
-    padding-bottom: 64px
+    padding-bottom: 70px
 
   >.nav
     position: fixed
     box-shadow: 0px 1px 6px rgba(0,0,0,0.2)
     z-index: $zi-l
+    border-top-width: 6px
+    border-top-style: solid
+    border-top-color: $color-home
+
+  &.-bike >.nav
+    border-top-color: $color-bike
+
+  &.-cat >.nav
+    border-top-color: $color-cat
+
+  &.-notes >.nav
+    border-top-color: $color-notes
 
   >.nav >.list
     display: flex
