@@ -1,6 +1,6 @@
 {{ partial "head.html" . }}
 
-<div class="st-wrapper">
+<div class="st-wrapper -haveheader">
   <main class="main">
     <article class="st-single{{ with .Params.categories }} -{{ . }}{{ end }}">
       {{ if ne .Params.eyecatch "" }}

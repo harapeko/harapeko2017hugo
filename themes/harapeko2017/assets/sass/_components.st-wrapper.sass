@@ -1,9 +1,16 @@
 .st-wrapper
   width: 100vw
-  min-height: $content-height
 
-  +tab
-    min-height: $content-height-tab
+  // 個別記事
+  &.-haveheader
+    min-height: $content-height-noheader
+
+  // 個別記事以外(ヘッダーあり)
+  &:not(.-haveheader)
+    min-height: $content-height
+
+    +tab
+      min-height: $content-height-tab
 
   >.main
     +pc
