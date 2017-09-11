@@ -53,6 +53,11 @@ https://machinist-switch-72660.netlify.com/
 {{< amzn B07496Z2GC "http://google.co.jp/" >}}
 ```
 
+このショートコードを使う場合、jsonを返すapiを環境変数に指定してください
+
+`export AMAZON_PRODUCT_API="https://example.com/?item="`
+
+詳細はソースを確認してください[harapeko2017hugo/themes/harapeko2017/layouts/shortcodes/amzn.html](harapeko2017hugo/themes/harapeko2017/layouts/shortcodes/amzn.html)
 
 ## ad
 **例: amazon**
