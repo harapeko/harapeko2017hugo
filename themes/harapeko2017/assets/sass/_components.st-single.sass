@@ -38,7 +38,7 @@
     margin: 0 ($margin / 2) ($margin / 2)
     padding: .4em
     text-align: center
-    color: lighten($color-text, 20%)
+    color: $color-text
     line-height: 1
 
     &::before,
@@ -79,13 +79,14 @@
   >.postheader >.postdate >.time
     text-align: center
     font-size: 1.4rem
-    color: currentColor
+    color: $color-text
 
   >.postheader >.taxonomy
     display: flex
     justify-content: center
     margin-bottom: $margin
     font-size: 1.6rem
+    color: $color-text
 
   >.postheader >.taxonomy >.categories,
   >.postheader >.taxonomy >.tags
