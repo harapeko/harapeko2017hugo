@@ -1,6 +1,6 @@
 .st-postcontent
   margin-bottom: $margin * 2
-  color: dimgray
+  color: $color-post-text
   font-size: 14px
 
   +tab
@@ -12,18 +12,19 @@
   // コード
   pre
     margin: $margin (-1.5 * $margin)
-    border: 1px solid #dddddd
+    border: 1px solid $color-border
     border-radius: 3px
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2)
+    box-shadow: $box-shadow
     font-size: .9em
     line-height: 2em
 
-  pre code
-    margin-right: 0
-    margin-left: 0
-    padding: 0
-    background-color: transparent
+    code
+      margin-right: 0
+      margin-left: 0
+      padding: 0
+      background-color: transparent
 
+  // インラインコード
   code
     margin-right: .5em
     margin-left: .5em
@@ -42,25 +43,34 @@
     a
       display: inline-block
       border-bottom: 3px solid rgba($color-pagination, .5)
-      color: dimgray
+      color: $color-post-text
       line-height: 0.6em
 
       &:hover
         color: $color-pagination
 
+  // 段落
   p
     margin-top: 1.5em
     margin-bottom: 1.5em
 
+  // figure
   figure
     margin: 1.5em auto
 
     +pc
       max-width: $desktop / 2
 
-  ul
+  // リスト共通
+  ul, ol
     margin-top: 1.5em
     margin-bottom: 1.5em
+
+    li:not(:last-child)
+      margin-bottom: .3em
+
+  // ul
+  ul
     padding: 0
     list-style: none
 
@@ -68,16 +78,26 @@
       padding-left: 2em
       background: url("data:image/svg+xml,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='7px' height='7px' viewBox='0 0 7 7' style='enable-background:new 0 0 7 7;' xml:space='preserve'%3E %3Ccircle id='XMLID_1_' style='fill:#{$color-pagination};' cx='3.5' cy='3.5' r='3.5'/%3E %3C/svg%3E ") no-repeat 0.7em 0.5em
 
-    li:not(:last-child)
-      margin-bottom: .3em
-
+  // ol
   ol
-    margin-top: 1.5em
-    margin-bottom: 1.5em
     list-style-type: decimal-leading-zero
 
     li
       padding-left: .5em
 
-    li:not(:last-child)
-      margin-bottom: .3em
+  // 水平線
+  hr
+    margin-top: 1.5em
+    margin-bottom: 1.5em
+    border-bottom-width: 4px
+    border-bottom-style: solid
+    box-shadow: $box-shadow
+
+  // 表組
+  table
+    margin-top: 1.5em
+    margin-bottom: 1.5em
+    box-shadow: $box-shadow
+
+    th, td
+      border: 1px solid $color-border

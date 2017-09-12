@@ -37,14 +37,14 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga porro excepturi be
 ***
 
 | TH1 | TH2 |
-----|---- 
+----|----
 | TD1 | TD3 |
 | TD2 | TD4 |
 
 | 左揃え | 中央揃え | 右揃え |
-|:---|:---:|---:|
-|1 |2 |3 |
-|4 |5 |6 |
+----|----|----
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
 
 >
 これは*引用*です  
