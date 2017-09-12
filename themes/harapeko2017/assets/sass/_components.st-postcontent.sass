@@ -1,6 +1,5 @@
 .st-postcontent
   margin-bottom: $margin * 2
-  color: $color-post-text
   font-size: 14px
 
   +tab
@@ -43,7 +42,7 @@
     a
       display: inline-block
       border-bottom: 3px solid rgba($color-pagination, .5)
-      color: $color-post-text
+      color: currentColor
       line-height: 0.6em
 
       &:hover
@@ -101,3 +100,9 @@
 
     th, td
       border: 1px solid $color-border
+
+  .warn
+    text-decoration-line: underline
+    text-decoration-style: wavy
+    text-decoration-color: $color-warn
+    text-shadow: 0 1px rgba(black, .1)
