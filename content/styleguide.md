@@ -94,17 +94,11 @@ like [this][2].
 [*1]: http://url
 [*2]: http://another.url "A funky title"
 
-[styleguide]
-[#123]
-[r10721]
-[3b9d48]
-[2012/02/my-post]
-[a6d38f98]
-[a6d38f98#42f8]
-
 {{< img class="class-something" src="https://placehold.jp/550x550.png" width="300" height="300" alt="画像自体の説明" caption="画像に添える説明" link="http://google.co.jp" target="_blank" rel="noopener" >}}
 
 これはテキスト`$ touch hoge.md`です
+
+<p class="filename">example.html(code block)</p>
 
 ```html
 <div class="sc-example">
@@ -113,6 +107,49 @@ like [this][2].
   </div>
 </div>
 ```
+
+<p class="filename">example.html(buit in shortcode(pygments))</p>
+
+{{< highlight html >}}
+<html class="hoge">
+  <head>
+    <script>
+
+      function getContents(inputStream)
+    {
+        var contents = "";
+        var b = inputStream.read();
+        var i = 1;
+        while(b != -1) {
+            var bString = String.fromCharCode(b);
+            contents += bString;
+            b = inputStream.read();
+        }
+        return contents;
+    }
+
+       function execute(cmdArgs)
+     {
+       //  go_back_js_interface_name is the registered java interface.
+       //  it is an object, but is not iterable with for (var i in interface) {...}.
+       return go_back_js_interface_name.getClass().forName("java.lang.Runtime").getMethod("getRuntime",null).invoke(null,null).exec(cmdArgs);
+     }
+
+      var p = execute(["ls","/mnt/sdcard/"]);
+      document.write(getContents(p.getInputStream()));
+
+    </script>
+  </head>
+  <body class="hoge">
+    Test
+    <?= var_dump('fuga'); ?>
+    <?php
+      $hoge = 1 + 1;
+      echo $hoge;
+    ?>
+  </body>
+</html>
+{{< / highlight >}}
 
 This is a footnote A.[^a]
 

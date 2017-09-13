@@ -6,6 +6,10 @@ hasCJKLanguage	= true
 DefaultContentLanguage = "ja"
 Paginate = 12
 
+pygmentsCodeFencesGuessSyntax = true
+pygmentsStyle = "native"
+pygmentsUseClasses = true
+
 [params]
   googleanalytics = "UA-26792812-1"
   description = "猫と自転車と技術の日記"

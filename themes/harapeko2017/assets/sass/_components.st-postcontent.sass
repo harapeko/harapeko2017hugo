@@ -14,14 +14,16 @@
     border: 1px solid $color-border
     border-radius: 3px
     box-shadow: $box-shadow
-    font-size: .9em
-    line-height: 2em
+    font-family: 'Consolas', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace
+    background-color: #452403
+    // pygments css native.cssの.lighlightからもってきた
+    color: #d0d0d0
 
     code
       margin-right: 0
       margin-left: 0
       padding: 0
-      background-color: transparent
+      background-color: transparent  
 
   // インラインコード
   code
@@ -52,6 +54,18 @@
   p
     margin-top: 1.5em
     margin-bottom: 1.5em
+
+    &.filename
+      margin: 0 (-1.5 * $margin) (-1 * $margin)
+      padding: ($margin / 2) $margin
+      color: $color-white
+      background-color: #e26b40
+      line-height: 1
+
+      +pc
+        padding-right: ($margin / 2)
+        padding-left: ($margin / 2)
+        transform: scale(1.02)
 
   // figure
   figure
@@ -101,6 +115,7 @@
     th, td
       border: 1px solid $color-border
 
+  // 波線。注意を向ける装飾
   .warn
     text-decoration-line: underline
     text-decoration-style: wavy
