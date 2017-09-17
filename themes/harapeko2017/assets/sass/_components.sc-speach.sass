@@ -1,0 +1,36 @@
+.sc-speach
+  display: flex
+
+  >.harapeko
+    width: 64px
+    margin-right: $margin
+    +pc
+      width: 128px
+
+  >.harapeko >.img
+    border-radius: 100%
+
+  >.fukidashi
+    flex: 1
+    position: relative
+    padding: ($margin / 2)
+    border: 2px solid $color-border
+    background-color: $color-white
+    border-radius: 8px
+
+    &:before
+      position: absolute
+      top: 1em
+      left: -10px
+      content: ''
+      border-top: 8px solid transparent
+      border-right: 10px solid $color-border
+      border-bottom: 8px solid transparent
+    &:after
+      position: absolute
+      top: 1em
+      left: -7px
+      content: ''
+      border-top: 8px solid transparent
+      border-right: 10px solid $color-white
+      border-bottom: 8px solid transparent

@@ -143,6 +143,8 @@ Cat
 
 {{< amzn B00ZTXKHS8 >}}
 
+{{< speach "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo error mollitia in voluptatem labore dolorem quod dolore, consequatur tempora quas expedita deserunt nam dolor unde natus ducimus doloremque perspiciatis quasi!" >}}
+
 This is a footnote A.[^a]
 
 This is a footnote B.[^b]
