@@ -6,24 +6,28 @@
     margin-top: 0
     margin-bottom: $margin
 
-  // ブログタイトル
-  >.blogtitle
+  >.list
     margin-top: 0
-    margin-bottom: ($margin * 2)
+    padding-left: 0
+    list-style-type: none
     text-align: center
-    border-width: 2px
-    border-color: $color-text
-    border-top-style: solid
-    border-bottom-style: solid
 
-  >.blogtitle >.link
-    display: block
-    color: $color-text
-    border-bottom: none
+  >.list >.item
+    display: inline-flex
+    margin-right: $margin / 2
+    margin-left: $margin / 2
+
+  >.list >.item >.link
+    transition: transform .2s
+    &:hover
+      transform: translateY(-2px)
+      box-shadow: 0 2px 4 rgba(0, 0, 0, .2)
+      opacify: .8
 
   // プロフィール
   >.profile
-    margin-bottom: $margin
+    &:first-of-type
+      margin-bottom: $margin
 
     +pc
       display: flex
