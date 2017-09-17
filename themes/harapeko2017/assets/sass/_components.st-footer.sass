@@ -4,22 +4,22 @@
     display: flex
     align-items: center
     justify-content: center
-    height: 50px
+    height: 60px
     font-weight: bold
 
   >.inner
     position: fixed
     width: 100vw
-    height: 50px
+    height: 60px
     bottom: 0
     z-index: $zi-l
 
   >.inner >.about,
   >.inner >.share
     position: absolute
-    bottom: -50px
-    width: 100px
-    height: 100px
+    bottom: -60px
+    width: 120px
+    height: 120px
     border-radius: 100%
     transition: transform .1s, opacify .1s
 
@@ -32,14 +32,14 @@
       opacity: .8
 
   >.inner >.about
-    left: -50px
+    left: -60px
 
   >.inner >.about >.icon
-    width: 100px
-    height: 100px
+    width: 120px
+    height: 120px
     border-radius: 100%
-    background-size: 20px
-    background-position: 60px 14px
+    background-size: 26px
+    background-position: 66px 14px
     box-shadow: 1px -1px 4px rgba(0,0,0,0.2)
     background-image: url('/images/components/st-footer/smile.svg')
     background-repeat: no-repeat
@@ -47,8 +47,8 @@
     border: none
     &:before
       position: absolute
-      top: 32px
-      left: 54px
+      top: 42px
+      left: 64px
       content: "About"
       font-size: 13px
       color: $color-white
@@ -57,17 +57,17 @@
     box-shadow: 1px -2px 4px rgba(0,0,0,0.2)
 
   >.inner >.share
-    right: -50px
+    right: -60px
 
   >.inner >.share >.icon
     border-radius: 100%
-    background-size: 22px
-    background-position: 22px 14px
+    background-size: 32px
+    background-position: 22px 12px
     box-shadow: -1px -1px 4px rgba(0,0,0,0.2)
     &:before
       position: absolute
-      top: 32px
-      left: 10px
+      top: 42px
+      right: 44px
       content: "tweet"
       font-size: 13px
       color: $color-white
