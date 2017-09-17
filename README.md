@@ -2,7 +2,7 @@
 harapeko2017 by HUGO
 
 # development
-https://machinist-switch-72660.netlify.com/
+https://harapeko.netlify.com/
 
 # shortcordes
 
