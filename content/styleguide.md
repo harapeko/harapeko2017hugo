@@ -85,12 +85,6 @@ Cat
 
 <somebbob@example.com>
 
-You can also put the [link URL][1] below the current paragraph
-like [this][2].
-
-[*1]: http://url
-[*2]: http://another.url "A funky title"
-
 {{< img class="class-something" src="https://placehold.jp/550x550.png" width="300" height="300" alt="画像自体の説明" caption="画像に添える説明" link="http://google.co.jp" target="_blank" rel="noopener" >}}
 
 これはテキスト`$ touch hoge.md`です
@@ -111,9 +105,7 @@ like [this][2].
 <html class="hoge">
   <head>
     <script>
-
-      function getContents(inputStream)
-    {
+      function getContents(inputStream) {
         var contents = "";
         var b = inputStream.read();
         var i = 1;
@@ -123,14 +115,13 @@ like [this][2].
             b = inputStream.read();
         }
         return contents;
-    }
+      }
 
-       function execute(cmdArgs)
-     {
-       //  go_back_js_interface_name is the registered java interface.
-       //  it is an object, but is not iterable with for (var i in interface) {...}.
-       return go_back_js_interface_name.getClass().forName("java.lang.Runtime").getMethod("getRuntime",null).invoke(null,null).exec(cmdArgs);
-     }
+      function execute(cmdArgs) {
+        //  go_back_js_interface_name is the registered java interface.
+        //  it is an object, but is not iterable with for (var i in interface) {...}.
+        return go_back_js_interface_name.getClass().forName("java.lang.Runtime").getMethod("getRuntime",null).invoke(null,null).exec(cmdArgs);
+      }
 
       var p = execute(["ls","/mnt/sdcard/"]);
       document.write(getContents(p.getInputStream()));
@@ -147,6 +138,10 @@ like [this][2].
   </body>
 </html>
 {{< / highlight >}}
+
+{{< amzn B00HZV9XKU >}}
+
+{{< amzn B00ZTXKHS8 >}}
 
 This is a footnote A.[^a]
 

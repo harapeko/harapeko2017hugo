@@ -47,7 +47,7 @@ https://machinist-switch-72660.netlify.com/
 
 `export AMAZON_PRODUCT_API="https://example.com/?item="`
 
-詳細はソースを確認してください[harapeko2017hugo/themes/harapeko2017/layouts/shortcodes/amzn.html](harapeko2017hugo/themes/harapeko2017/layouts/shortcodes/amzn.html)
+APIで使うものに関してはソースを確認してください(shortcodeを修正してください)[harapeko2017hugo/themes/harapeko2017/layouts/shortcodes/amzn.html](harapeko2017hugo/themes/harapeko2017/layouts/shortcodes/amzn.html)
 
 ## ad
 **例: amazon**

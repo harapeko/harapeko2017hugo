@@ -15,52 +15,22 @@ Params:
 {{ $api := getenv "AMAZON_PRODUCT_API" }}
 {{ $itemId := index .Params 0 }}
 {{ $json := getJSON $api $itemId }}
-<table>
-  <tr>
-    <th>status</th>
-    <td>{{ $json.status }}</td>
-  </tr>
-  <tr>
-    <th>associate</th>
-    <td>{{ $json.associate }}</td>
-  </tr>
-  <tr>
-    <th>asin</th>
-    <td>{{ $json.asin }}</td>
-  </tr>
-  <tr>
-    <th>title</th>
-    <td>{{ $json.title }}</td>
-  </tr>
-  <tr>
-    <th>author</th>
-    <td>{{ $json.author }}</td>
-  </tr>
-  <tr>
-    <th>manufacturer</th>
-    <td>{{ $json.manufacturer }}</td>
-  </tr>
-  <tr>
-    <th>item_url</th>
-    <td>
-      <a href="{{ $json.item_url }}">{{ $json.item_url }}</a>
-    </td>
-  </tr>
-  <tr>
-    <th>image_url</th>
-    <td>
-      {{ if index .Params 1 }}
-        <p>独自画像。{{ index .Params 1 }}</p>
-      {{ else }}
-        {{/* 指定、中、大、小の優先順位で画像を表示します */}}
-        {{ if ne $json.images.medium "" }}
-          <p>{{ $json.images.medium }}</p>
-        {{ else if ne $json.images.large "" }}
-          <p>{{ $json.images.large }}</p>
-        {{ else if ne $json.images.small "" }}
-          <p>{{ $json.images.small }}</p>
-        {{ end }}
-      {{ end }}
-    </td>
-  </tr>
-</table>
+<div class="sc-amzn">
+  {{ with $json.title }}<p class="title">{{ . }}</p>{{ end }}
+  {{ if $json.author }}
+    <p class="author">{{ $json.author }}</p>
+  {{ else if $json.manufacturer }}
+    <p class="manufacturer">{{ $json.manufacturer }}</p>
+  {{ end }}
+  <div class="media">
+    <div class="images">
+      {{/* 指定、中、大、小の優先順位で画像を表示します。基本的には中サイズの画像が使われる想定です */}}
+      <amp-img class="img" src="{{ index .Params 1 | default $json.images.medium | default $json.images.large | default $json.images.smalls }}" alt="{{ $json.title }}" width="200" height="200" layout="responsive"></amp-img>
+    </div>
+    <div class="info">
+      {{ with $json.item_url }}<div class="btn"><a class="detail" href="{{ . }}" target="_blank">詳しくみる</a></div>{{ end }}
+      {{ with $json.cr_url }}<div class="btn"><a class="review" href="{{ . }}" target="_blank">評判をみる</a></div>{{ end }}
+      {{ with $json.wish_url }}<div class="btn"><a class="wish" href="{{ . }}" target="_blank">ほしい物に追加</a></div>{{ end }}
+    </div>
+  </div>
+</div>
