@@ -9,7 +9,7 @@
     font-size: 17px
 
   // コード
-  pre
+  pre:not([class])
     margin: $margin (-1.5 * $margin)
     border: 1px solid $color-border
     border-radius: 3px
@@ -19,21 +19,21 @@
     // pygments css native.cssの.lighlightからもってきた
     color: #d0d0d0
 
-    code
+    code:not([class])
       margin-right: 0
       margin-left: 0
       padding: 0
       background-color: transparent
 
   // インラインコード
-  code
+  code:not([class])
     margin-right: .5em
     margin-left: .5em
     padding: .25em .5em
     background-color: #e6e6e6
 
   // 引用
-  blockquote
+  blockquote:not([class])
     margin-left: 0
     padding-left: $margin
     border-left-width: 4px
@@ -99,7 +99,7 @@
       padding-left: .5em
 
   // 水平線
-  hr
+  hr:not([class])
     margin-top: 1.5em
     margin-bottom: 1.5em
     border-bottom-width: 4px
@@ -107,12 +107,12 @@
     box-shadow: $box-shadow
 
   // 表組
-  table
+  table:not([class])
     margin-top: 1.5em
     margin-bottom: 1.5em
     box-shadow: $box-shadow
 
-    th, td
+    th:not([class]), td:not([class])
       border: 1px solid $color-border
 
   // 波線。注意を向ける装飾
