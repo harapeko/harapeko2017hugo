@@ -1,7 +1,8 @@
 module.exports = {
   staticFileGlobs: [
     'images/**.*',
-    'offline.html'
+    'offline.html',
+    "images/components/nf-box/world_germany_lederhose.png"
   ],
   runtimeCaching: [{
     urlPattern: '*',
