@@ -2,14 +2,26 @@
   "lang": "ja",
   "name": "はらぺこ屋",
   "short_name": "はらぺこ屋",
+  "start_url": "/",
   "icons": [
     {
       "src": "/images/harapeko.jpg",
       "sizes": "144x144",
       "type": "image/jpg"
+    },
+    {
+      "src": "/images/icon-192x192.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/harapeko-512x512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpg"
     }
   ],
-  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#33A5E2"
+  "theme_color": "#33A5E2",
+  "background_color": "#FAFAFA",
+  "orientation": "portrait"
 }
