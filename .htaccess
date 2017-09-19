@@ -1,7 +1,5 @@
 RewriteEngine on
 
-redirect 301 / https://harapeko.netlify.com
-
 redirect 301 /自転車/2408 https://harapeko.netlify.com/bike/20160720/
 redirect 301 /自転車/2378 https://harapeko.netlify.com/bike/20160514/
 redirect 301 /自転車/2365 https://harapeko.netlify.com/bike/2016507/
@@ -23,16 +21,18 @@ redirect 301 /技術/1362 https://harapeko.netlify.com/notes/20131106/
 redirect 301 /技術/1715 https://harapeko.netlify.com/notes/20131122/
 redirect 301 /技術/1345 https://harapeko.netlify.com/notes/20130917/
 redirect 301 /技術/1334 https://harapeko.netlify.com/notes/20130916/
-
-redirect 301 /技術/1319 https://harapeko.netlify.com/notes/xxxx/
-redirect 301 /技術/1259 https://harapeko.netlify.com/notes/xxxx/
-redirect 301 /技術/1130 https://harapeko.netlify.com/notes/xxxx/
-redirect 301 /技術/1123 https://harapeko.netlify.com/notes/xxxx/
-redirect 301 /技術/1116 https://harapeko.netlify.com/notes/xxxx/
 redirect 301 /技術/1100 https://harapeko.netlify.com/notes/20130411/
 redirect 301 /技術/1097 https://harapeko.netlify.com/notes/20130410/
 
-redirect 301 /category/未分類 https://harapeko.netlify.com
+redirect 301 /技術/1319 https://harapeko.netlify.com/
+redirect 301 /技術/1259 https://harapeko.netlify.com/
+redirect 301 /技術/1130 https://harapeko.netlify.com/
+redirect 301 /技術/1123 https://harapeko.netlify.com/
+redirect 301 /技術/1116 https://harapeko.netlify.com/
+
+redirect 301 /category/未分類 https://harapeko.netlify.com/
 redirect 301 /category/技術 https://harapeko.netlify.com/categories/notes/
 redirect 301 /category/自転車 https://harapeko.netlify.com/categories/bike/
 redirect 301 /category/ねこ https://harapeko.netlify.com/categories/cat/
+
+redirect 301 / https://harapeko.netlify.com/
