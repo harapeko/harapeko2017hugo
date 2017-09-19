@@ -1,10 +1,34 @@
 <header class="st-header{{ with .Data.Term }} -{{ . }}{{ end }}">
   <nav class="nav">
     <ul class="list">
-      <li class="item"><a class="link -home" href="/"><h2 class="title">はらぺこ屋</h2></a></li>
-      <li class="item"><a class="link -bike" href="/categories/bike"><h2 class="title">自転車</h2></a></li>
-      <li class="item"><a class="link -cat" href="/categories/cat"><h2 class="title">猫</h2></a></li>
-      <li class="item"><a class="link -notes" href="/categories/notes"><h2 class="title">雑記</h2></a></li>
+      <li class="item"><a class="link -home" href="/">
+        {{ if eq .URL "/" }}
+          <h1 class="title">はらぺこ屋</h1>
+        {{ else }}
+          <h2 class="title">はらぺこ屋</h2>
+        {{ end }}
+      </a></li>
+      <li class="item"><a class="link -bike" href="/categories/bike/">
+        {{ if eq .URL "/categories/bike/" }}
+          <h1 class="title">自転車</h1>
+        {{ else }}
+          <h2 class="title">自転車</h2>
+        {{ end }}
+      </a></li>
+      <li class="item"><a class="link -cat" href="/categories/cat/">
+        {{ if eq .URL "/categories/cat/" }}
+          <h1 class="title">猫</h1>
+        {{ else }}
+          <h2 class="title">猫</h2>
+        {{ end }}
+      </a></li>
+      <li class="item"><a class="link -notes" href="/categories/notes/">
+        {{ if eq .URL "/categories/notes/" }}
+          <h1 class="title">雑記</h1>
+        {{ else }}
+          <h2 class="title">雑記</h2>
+        {{ end }}
+      </a></li>
     </ul>
   </nav>
 </header>
