@@ -10,17 +10,22 @@
     <title>{{ with .Title }}{{ . }}|{{ end }}{{ .Site.Title }}</title>
     <meta property="og:title" content="{{ with .Title }}{{ . }}|{{ end }}{{ .Site.Title }}">
   {{ end }}
-  {{ if gt (len .Summary) 0 }}
+  {{ if ne (string .Summary) "" }}
     <meta name="description" content="{{ .Summary }}">
     <meta property="og:description" content="{{ .Summary }}">
   {{ else }}
     <meta name="description" content="猫と自転車の雑記">
     <meta property="og:description" content="猫と自転車の雑記">
   {{ end }}
+  {{ if ne (string .Params.eyecatch) "" }}
+    <meta property="og:image" content="{{ .Params.eyecatch }}">
+    <meta property="og:image:alt" content="{{ .Params.eyecatch_alt }}">
+  {{ else }}
+    <meta property="og:image" content="https://harapeko.netlify.com/images/ogp_card2.png">
+    <meta property="og:image:alt" content="はらぺこ屋">
+  {{ end }}
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://harapeko.netlify.com">
-  <meta property="og:image" content="https://harapeko.netlify.com/images/ogp_card2.png">
-  <meta property="og:image:alt" content="はらぺこ屋">
+  <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:site_name" content="はらぺこ屋">
   <meta property="fb:app_id" content="1727471197506613">
   <meta name="twitter:card" content="summary_large_image">
