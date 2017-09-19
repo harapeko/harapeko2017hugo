@@ -2,18 +2,30 @@
 <html ⚡ lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>
-    {{ if eq .Title .Site.Title }}
-      {{ .Site.Title }}
-    {{ else }}
-      {{ with .Title }}{{ . }}|{{ end }}{{ .Site.Title }}
-    {{ end }}
-  </title>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"></head>
+
+  {{ if eq .Title .Site.Title }}
+    <title>{{ .Site.Title }}</title>
+    <meta property="og:title" content="{{ .Site.Title }}">
+  {{ else }}
+    <title>{{ with .Title }}{{ . }}|{{ end }}{{ .Site.Title }}</title>
+    <meta property="og:title" content="{{ with .Title }}{{ . }}|{{ end }}{{ .Site.Title }}">
+  {{ end }}
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harapeko.netlify.com">
+  <meta property="og:image" content="https://harapeko.netlify.com/images/ogp_card2.png">
+  <meta property="og:image:alt" content="はらぺこ屋">
+  <meta property="og:site_name" content="はらぺこ屋">
+  <meta property="fb:app_id" content="1727471197506613">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@harapeko_wktk">
+
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="manifest" href="/manifest.json">
-  <link rel="alternate" type="application/rss+xml" href="/index.xml" />
+  <link rel="alternate" type="application/rss+xml" href="/index.xml">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <meta name="theme-color" content="#33A5E2">
+
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   <style amp-custom>{{ partial "app.css" . | safeCSS }}</style>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
