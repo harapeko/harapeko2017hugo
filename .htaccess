@@ -17,10 +17,11 @@ redirect 301 /自転車/1962 https://harapeko.netlify.com/bike/20151209/
 redirect 301 /自転車/1866 https://harapeko.netlify.com/bike/20140731/
 redirect 301 /自転車/1452 https://harapeko.netlify.com/bike/20131115/
 redirect 301 /自転車/1367 https://harapeko.netlify.com/bike/20131113/
+redirect 301 /自転車/1744 https://harapeko.netlify.com/bike/20140324/
 
 redirect 301 /技術/1362 https://harapeko.netlify.com/notes/20131106/
 redirect 301 /技術/1715 https://harapeko.netlify.com/notes/20131122/
-redirect 301 /技術/1744 https://harapeko.netlify.com/notes/xxxx/
+
 redirect 301 /技術/1345 https://harapeko.netlify.com/notes/xxxx/
 redirect 301 /技術/1334 https://harapeko.netlify.com/notes/xxxx/
 redirect 301 /技術/1319 https://harapeko.netlify.com/notes/xxxx/
