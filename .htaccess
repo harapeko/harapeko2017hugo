@@ -1,0 +1,36 @@
+RewriteEngine on
+
+redirect 301 / https://harapeko.netlify.com
+
+redirect 301 /自転車/2408 https://harapeko.netlify.com/bike/20160720/
+redirect 301 /自転車/2378 https://harapeko.netlify.com/bike/20160514/
+redirect 301 /自転車/2365 https://harapeko.netlify.com/bike/2016507/
+redirect 301 /自転車/2327 https://harapeko.netlify.com/bike/2016507/
+redirect 301 /自転車/2296 https://harapeko.netlify.com/bike/20160506/
+redirect 301 /自転車/2276 https://harapeko.netlify.com/bike/20160505/
+redirect 301 /自転車/2231 https://harapeko.netlify.com/bike/20160504/
+redirect 301 /自転車/2108 https://harapeko.netlify.com/bike/20160114/
+redirect 301 /自転車/2090 https://harapeko.netlify.com/bike/20160113/
+redirect 301 /自転車/2051 https://harapeko.netlify.com/bike/20160104/
+redirect 301 /自転車/2022 https://harapeko.netlify.com/bike/20160103/
+redirect 301 /自転車/1962 https://harapeko.netlify.com/bike/20151209/
+redirect 301 /自転車/1866 https://harapeko.netlify.com/bike/20140731/
+redirect 301 /自転車/1452 https://harapeko.netlify.com/bike/20131115/
+redirect 301 /自転車/1367 https://harapeko.netlify.com/bike/20131113/
+
+redirect 301 /技術/1362 https://harapeko.netlify.com/notes/20131106/
+redirect 301 /技術/1744 https://harapeko.netlify.com/notes/xxxx/
+redirect 301 /技術/1345 https://harapeko.netlify.com/notes/xxxx/
+redirect 301 /技術/1334 https://harapeko.netlify.com/notes/xxxx/
+redirect 301 /技術/1319 https://harapeko.netlify.com/notes/xxxx/
+redirect 301 /技術/1259 https://harapeko.netlify.com/notes/xxxx/
+redirect 301 /技術/1130 https://harapeko.netlify.com/notes/xxxx/
+redirect 301 /技術/1123 https://harapeko.netlify.com/notes/xxxx/
+redirect 301 /技術/1116 https://harapeko.netlify.com/notes/xxxx/
+redirect 301 /技術/1100 https://harapeko.netlify.com/notes/20130411/
+redirect 301 /技術/1097 https://harapeko.netlify.com/notes/20130410/
+
+redirect 301 /category/未分類 https://harapeko.netlify.com
+redirect 301 /category/技術 https://harapeko.netlify.com/categories/notes/
+redirect 301 /category/自転車 https://harapeko.netlify.com/categories/bike/
+redirect 301 /category/ねこ https://harapeko.netlify.com/categories/cat/
