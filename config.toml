@@ -11,7 +11,7 @@ pygmentsStyle = "native"
 pygmentsUseClasses = true
 
 [params]
-  googleanalytics = "UA-26792812-1"
+  googleanalytics = "UA-26792812-4"
   description = "猫と自転車と技術の日記"
   author      = "@harapeko_wktk"
 
