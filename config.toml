@@ -1,5 +1,5 @@
 theme           = "harapeko2017"
-baseURL         = "https://harapeko.netlify.com/"
+baseURL         = "https://harapeko.netlify.com"
 title           = "はらぺこ屋"
 enableGitInfo   = true
 hasCJKLanguage	= true

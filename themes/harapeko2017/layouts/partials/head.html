@@ -18,7 +18,7 @@
     <meta property="og:description" content="猫と自転車の雑記">
   {{ end }}
   {{ if ne (string .Params.eyecatch) "" }}
-    <meta property="og:image" content="{{ .Params.eyecatch }}">
+    <meta property="og:image" content="https://harapeko.netlify.com{{ .Params.eyecatch }}">
     <meta property="og:image:alt" content="{{ .Params.eyecatch_alt }}">
   {{ else }}
     <meta property="og:image" content="https://harapeko.netlify.com/images/ogp_card2.png">
