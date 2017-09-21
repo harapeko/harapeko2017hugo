@@ -49,9 +49,11 @@ https://harapeko.netlify.com/
 
 APIで使うものに関してはソースを確認してください(shortcodeを修正してください)[harapeko2017hugo/themes/harapeko2017/layouts/shortcodes/amzn.html](harapeko2017hugo/themes/harapeko2017/layouts/shortcodes/amzn.html)
 
-## ad
-**例: amazon**
+## wiggle
 
 ```html
-{{< ad title="プリスクリプション・ダイエット 療法食 RD 猫 4kg" link="http://amzn.to/2x2RGoO" src="https://images-na.ssl-images-amazon.com/images/I/61p6LU2hjpL._SL1000_.jpg" width="1000" height="1000" >}}
+{{< wiggle title="ELEMNT BOLT サイクルコンピュータ"
+  brand="Wahoo"
+  link="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3359351&pid=884865960&vc_url=http%3A%2F%2Fwww.wiggle.jp%2Fwahoo-elemnt-bolt-%25E3%2582%25B5%25E3%2582%25A4%25E3%2582%25AF%25E3%2583%25AB%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2594%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25BF%2F%3Futm_source%3Dvaluecommerce%26utm_medium%3Daffiliates%26utm_campaign%3Daffiliate-website"
+  src="http://www.wigglestatic.com/product-media/100302782/Wahoo-ELEMNT-BOLT-Cycling-Computer-GPS-Cycle-Computers-Black-SS16-WFCC3.jpg?w=430&h=430&a=7" width="430" height="430" >}}
 ```

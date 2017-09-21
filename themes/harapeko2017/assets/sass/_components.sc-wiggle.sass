@@ -1,0 +1,62 @@
+.sc-wiggle
+  margin: $margin (-1 * $margin)
+  padding: $margin
+  background-color: #3d4244
+  color: $color-white
+
+  +pc
+    margin-right: -100vw
+    margin-left: -100vw
+
+  >.media
+    display: flex
+
+  // 画像領域
+  >.media >.images
+    flex: 1
+    margin-right: $margin
+
+  // 画像
+  >.media >.images >.img
+    min-width: 100%
+    max-height: 200px
+
+  >.media >.images >.img > img
+    object-fit: contain
+    object-position: top right
+
+  // 情報領域
+  >.media >.info
+    flex: 1
+
+  // タイトル
+  >.media >.info >.title
+    margin-top: 0
+    margin-bottom: 0
+    font-weight: bold
+    text-align: left
+
+  // brand
+  >.media >.info >.brand
+    margin-top: 0
+    text-align: left
+
+  // 詳細URL
+  >.media >.info >.btn >.detail
+    display: block
+    margin-bottom: $margin / 2
+    padding: $margin ($margin * 1.5)
+    border-radius: 8px
+    color: $color-white
+    background-color: #e88a14
+    text-align: center
+    font-size: 1.2em
+    +pc
+      display: inline-flex
+      text-align: left
+
+
+    &:hover
+      transition: transform .2s
+      transform: translateY(-1px)
+      box-shadow: 0 2px 1px rgba(0, 0, 0, .4)

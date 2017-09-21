@@ -1,0 +1,26 @@
+{{/*
+  Usage:
+    {{< wiggle title="ELEMNT BOLT サイクルコンピュータ"
+      brand="Wahoo"
+      link="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3359351&pid=884865960&vc_url=http%3A%2F%2Fwww.wiggle.jp%2Fwahoo-elemnt-bolt-%25E3%2582%25B5%25E3%2582%25A4%25E3%2582%25AF%25E3%2583%25AB%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2594%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25BF%2F%3Futm_source%3Dvaluecommerce%26utm_medium%3Daffiliates%26utm_campaign%3Daffiliate-website"
+      src="http://www.wigglestatic.com/product-media/100302782/Wahoo-ELEMNT-BOLT-Cycling-Computer-GPS-Cycle-Computers-Black-SS16-WFCC3.jpg?w=430&h=430&a=7" width="430" height="430" >}}
+
+  Params:
+    title*:  string  タイトル   必須
+    link*:   string  リンクパス 必須
+    src*:    string  画像パス   必須
+    width*:  string  横幅      必須
+    height*: string  高さ      必須
+*/}}
+<div class="sc-wiggle">
+  <div class="media">
+    <div class="images">
+        <amp-img class="img" src="{{ .Get "src" }}" width="{{ .Get "width" }}" height="{{ .Get "height" }}" alt="{{ .Get "title" }}" layout="responsive"></amp-img>
+    </div>
+    <div class="info">
+        <p class="title">{{ .Get "title" }}</p>
+        <p class="brand">{{ .Get "brand" }}</p>
+        <div class="btn"><a class="detail" href="{{ .Get "link" }}" target="_blank">Wiggle</a></div>
+    </div>
+  </div>
+</div>
