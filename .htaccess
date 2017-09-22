@@ -35,4 +35,6 @@ redirect 301 /category/技術 https://harapeko.netlify.com/categories/notes/
 redirect 301 /category/自転車 https://harapeko.netlify.com/categories/bike/
 redirect 301 /category/ねこ https://harapeko.netlify.com/categories/cat/
 
+redirect 301 /tag/bolt https://harapeko.netlify.com/tags/wahoo-elemnt/
+
 redirect 301 / https://harapeko.netlify.com/
