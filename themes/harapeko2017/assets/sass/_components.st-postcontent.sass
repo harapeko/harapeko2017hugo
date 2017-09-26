@@ -8,6 +8,20 @@
   +pc
     font-size: 17px
 
+  // 見出し
+  h1::before
+    content: "#"
+    letter-spacing: -.1em
+    margin-right: $margin / 2
+  h2::before
+    content: "##"
+    letter-spacing: -.1em
+    margin-right: $margin / 2
+  h3::before
+    content: "###"
+    letter-spacing: -.1em
+    margin-right: $margin / 2
+
   // コード
   pre:not([class])
     margin: $margin (-1.5 * $margin)
