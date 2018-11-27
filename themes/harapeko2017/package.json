@@ -12,7 +12,7 @@
     "gulp-concat": "2.6.1",
     "gulp-cssnano": "2.1.2",
     "gulp-load-plugins": "1.5.0",
-    "gulp-plumber": "1.2.0",
+    "gulp-plumber": "1.2.1",
     "gulp-replace": "0.6.1",
     "gulp-sass": "3.1.0",
     "sakura.css": "1.0.0"
