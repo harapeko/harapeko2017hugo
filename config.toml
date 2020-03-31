@@ -21,6 +21,6 @@ pygmentsUseClasses = true
 
 [permalinks]
   food = "/:section/:title/"
-  自転車 = "/:section/:title/"
-  猫 = "/:section/:title/"
-  技術 = "/:section/:title/"
+  bike = "/:section/:title/"
+  cat = "/:section/:title/"
+  notes = "/:section/:title/"
