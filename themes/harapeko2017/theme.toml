@@ -12,7 +12,7 @@ min_version = "0.26"
 
 [author]
   name = "harapeko"
-  homepage = "http://harapeko.wktk.so"
+  homepage = "https://harapeko.netlify.com"
 
 # If porting an existing theme
 [original]
