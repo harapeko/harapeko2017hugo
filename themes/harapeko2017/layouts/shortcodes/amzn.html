@@ -15,22 +15,16 @@ Params:
 {{ $api := getenv "AMAZON_PRODUCT_API" }}
 {{ $itemId := index .Params 0 }}
 {{ $json := getJSON $api $itemId }}
+
 <div class="sc-amzn">
-  {{ with $json.title }}<p class="title">{{ . }}</p>{{ end }}
-  {{ if $json.author }}
-    <p class="author">{{ $json.author }}</p>
-  {{ else if $json.manufacturer }}
-    <p class="manufacturer">{{ $json.manufacturer }}</p>
-  {{ end }}
   <div class="media">
     <div class="images">
-      {{/* 指定、中、大、小の優先順位で画像を表示します。基本的には中サイズの画像が使われる想定です */}}
-      <amp-img class="img" src="{{ index .Params 1 | default $json.images.medium | default $json.images.large | default $json.images.smalls }}" alt="{{ $json.title }}" width="200" height="200" layout="responsive"></amp-img>
+      <amp-img class="img" src="{{ index .Params 1 | default $json.images.large | default $json.images.medium | default $json.images.smalls }}" alt="商品画像{{ $json.title }}" width="200" height="200" layout="responsive"></amp-img>
     </div>
     <div class="info">
-      {{ with $json.item_url }}<div class="btn"><a class="detail" href="{{ . }}" target="_blank">詳しくみる</a></div>{{ end }}
-      {{ with $json.cr_url }}<div class="btn"><a class="review" href="{{ . }}" target="_blank">評判をみる</a></div>{{ end }}
-      {{ with $json.wish_url }}<div class="btn"><a class="wish" href="{{ . }}" target="_blank">ほしい物に追加</a></div>{{ end }}
+      <a class="title" href="{{ $json.item_url }}">{{ $json.title }}</a>
+      {{ with $json.price }}<p class="price">{{ . }}</p>{{ end }}
+      {{ with $json.is_prime }}<amp-img class="prime" src="/images/components/sc-amzn/prime.png" alt="amazon prime有効" width="72" height="20"></amp-img>{{ end }}
     </div>
   </div>
 </div>

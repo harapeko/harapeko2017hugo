@@ -7,24 +7,6 @@
     margin-right: -100vw
     margin-left: -100vw
 
-  // タイトル
-  >.title
-    margin-top: 0
-    margin-bottom: 0
-    font-weight: bold
-    text-align: left
-    +tab
-      text-align: center
-
-  // 著者
-  >.author,
-  // 業者
-  >.manufacturer
-    margin-top: 0
-    text-align: left
-    +tab
-      text-align: center
-
   >.media
     display: flex
 
@@ -45,30 +27,21 @@
   // 情報領域
   >.media >.info
     flex: 1
+    display: flex
+    justify-content: center
+    flex-direction: column
 
-  // 詳細URL
-  >.media >.info >.btn >.detail,
-  >.media >.info >.btn >.review,
-  >.media >.info >.btn >.wish
-    display: inline-flex
+  // タイトル
+  >.media >.info >.title
     margin-bottom: $margin / 2
-    padding: 10px
-    border-radius: 8px
-    color: $color-white
+    text-decoration: underline
 
-    &:hover
-      transition: transform .2s
-      transform: translateY(-1px)
-      box-shadow: 0 2px 1px rgba(0, 0, 0, .4)
+    +pc
+      max-width: ($desktop / 16 * 6) - ($margin * 2)
 
-  // 詳しくみる
-  >.media >.info >.btn >.detail
-    background-color: #e88a14
+  // 価格
+  >.media >.info >.price
+    margin-bottom: 0
 
-  // 評判をみる
-  >.media >.info >.btn >.review
-    background-color: #0b59a9
-
-  // 欲しい物リスト
-  >.media >.info >.btn >.wish
-    background-color: #0ba976
+  // prime
+  // >.media >.info >.prime

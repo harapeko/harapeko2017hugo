@@ -37,13 +37,15 @@ g.task 'css', ->
   sass_compile_process(paths.css.in, paths.css.out)
 
 # test task
-g.task 'test', ->
+g.task 'test', (done) ->
   console.log 'this is testtttttttt'
+  do done
 
 # watch
-g.task 'watch' , ->
+g.task 'watch' , (done) ->
   # css
-  g.watch paths.css.watch, ['css']
+  g.watch paths.css.watch, g.task('css')
+  do done
 
 # default
-g.task 'default', ['watch']
+g.task 'default', g.task 'watch'
