@@ -2,28 +2,28 @@
   <nav class="nav">
     <ul class="list">
       <li class="item"><a class="link -home" href="/">
-        {{ if eq .URL "/" }}
+        {{ if eq .Permalink "/" }}
           <h1 class="title">はらぺこ屋</h1>
         {{ else }}
           <h2 class="title">はらぺこ屋</h2>
         {{ end }}
       </a></li>
       <li class="item"><a class="link -bike" href="/categories/bike/">
-        {{ if eq .URL "/categories/bike/" }}
+        {{ if eq .Permalink "/categories/bike/" }}
           <h1 class="title">自転車</h1>
         {{ else }}
           <h2 class="title">自転車</h2>
         {{ end }}
       </a></li>
       <li class="item"><a class="link -cat" href="/categories/cat/">
-        {{ if eq .URL "/categories/cat/" }}
+        {{ if eq .Permalink "/categories/cat/" }}
           <h1 class="title">猫</h1>
         {{ else }}
           <h2 class="title">猫</h2>
         {{ end }}
       </a></li>
       <li class="item"><a class="link -notes" href="/categories/notes/">
-        {{ if eq .URL "/categories/notes/" }}
+        {{ if eq .Permalink "/categories/notes/" }}
           <h1 class="title">雑記</h1>
         {{ else }}
           <h2 class="title">雑記</h2>
