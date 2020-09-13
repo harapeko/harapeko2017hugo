@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://harapeko.netlify.com/sitemap.xml
+Sitemap: https://harapeko.netlify.app/sitemap.xml

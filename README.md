@@ -2,7 +2,7 @@
 harapeko2017 by HUGO
 
 # URL
-https://harapeko.netlify.com/
+https://harapeko.netlify.app/
 
 # shortcordes
 
