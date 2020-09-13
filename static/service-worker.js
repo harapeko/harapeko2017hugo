@@ -37,7 +37,13 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["images/components/nf-box/world_germany_lederhose.png","50d5616b680dc2d4736c1d30f3958dee"],["images/harapeko-192x192.jpg","05701b360f4af6aa343b72d93e26e75b"],["images/harapeko-512x512.jpg","287ec59bd3f996c18d1cffca823865eb"],["images/harapeko.jpg","87a6493790a35e6215da0387ca274f39"],["images/publisher_logo.jpg","cfdff77e3051ea36c8e96ed1845bae06"],["offline.html","6e5a7a01c666db675f23610f4fede25d"]];
+var precacheConfig = [
+  ["https://harapeko.netlify.app/images/components/nf-box/world_germany_lederhose.png","50d5616b680dc2d4736c1d30f3958dee"],
+  ["https://harapeko.netlify.app/images/harapeko-192x192.jpg","05701b360f4af6aa343b72d93e26e75b"],
+  ["https://harapeko.netlify.app/images/harapeko-512x512.jpg","287ec59bd3f996c18d1cffca823865eb"],
+  ["https://harapeko.netlify.app/images/harapeko.jpg","87a6493790a35e6215da0387ca274f39"],
+  ["https://harapeko.netlify.app/images/publisher_logo.jpg","cfdff77e3051ea36c8e96ed1845bae06"],
+  ["https://harapeko.netlify.app/offline.html","6e5a7a01c666db675f23610f4fede25d"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
@@ -176,10 +182,10 @@ self.addEventListener('install', function(event) {
         );
       });
     }).then(function() {
-      
+
       // Force the SW to transition from installing -> active state
       return self.skipWaiting();
-      
+
     })
   );
 });
@@ -199,9 +205,9 @@ self.addEventListener('activate', function(event) {
         );
       });
     }).then(function() {
-      
+
       return self.clients.claim();
-      
+
     })
   );
 });
@@ -262,7 +268,7 @@ self.addEventListener('fetch', function(event) {
 
 
 // *** Start of auto-included sw-toolbox code. ***
-/* 
+/*
  Copyright 2016 Google Inc. All Rights Reserved.
 
  Licensed under the Apache License, Version 2.0 (the "License");
@@ -296,9 +302,9 @@ toolbox.router.get("*", (request, values, options) => {
       // strategy, and send an offline page if both network and
       // cache fail.
       return toolbox.networkFirst(request, values, options)
-        .catch(() => {      
+        .catch(() => {
           return caches.match('/offline.html', {ignoreSearch: true});
-        });      
+        });
     }, {});
 toolbox.router.get(/cdn\.ampproject\.org/, toolbox.fastest, {});
 
