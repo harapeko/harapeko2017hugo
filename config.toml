@@ -24,3 +24,8 @@ pygmentsUseClasses = true
   bike = "/:section/:title/"
   cat = "/:section/:title/"
   notes = "/:section/:title/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
