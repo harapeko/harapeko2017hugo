@@ -86,17 +86,25 @@
     margin: 1.5em auto
 
     +pc
-      max-width: $desktop / 2
+      max-width: $desktop / 2 * 3
 
     >amp-img
       max-height: 420px
       >img
         object-fit: contain
 
+    >figcaption
+      margin-top: 1em
+      text-align: center
+
   // リスト共通
   ul, ol
     margin-top: 1.5em
     margin-bottom: 1.5em
+
+    ul, ol
+      margin-top: 0
+      margin-bottom: 0
 
     li:not(:last-child)
       margin-bottom: .3em
